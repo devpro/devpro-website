@@ -1,1 +1,4 @@
-# Hello world
+---
+title: Welcome
+layout: home
+---

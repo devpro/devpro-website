@@ -10,14 +10,8 @@ Install JavaScript dependencies:
 npm install
 ```
 
-Build the website:
-
-```bash
-npx @11ty/eleventy
-```
-
 Run locally the website:
 
 ```bash
-npx @11ty/eleventy --serve
+npm start
 ```
