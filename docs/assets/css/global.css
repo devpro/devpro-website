@@ -13,6 +13,45 @@ a:has(> article):hover article {
   background-color: var(--pico-primary-hover-background);
 }
 
+/* breadcrumd */
+
+nav[aria-label="breadcrumb"] ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav[aria-label="breadcrumb"] li:not(:last-child)::after {
+  content: " > ";
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+nav[aria-label="breadcrumb"] li {
+  display: inline;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+nav[aria-label="breadcrumb"] svg {
+  vertical-align: text-bottom;
+  margin-right: 0.25rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /* design of copy button in code display */
 
 pre {
