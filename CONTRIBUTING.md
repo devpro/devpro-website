@@ -4,22 +4,37 @@
 
 The website is using:
 
-- [Eleventy (11ty)](https://www.11ty.dev/) as static site generator (HTML builder)
-- [Pico CSS](https://picocss.com/) as CSS framework (web design)
+1. [Eleventy (11ty)](https://www.11ty.dev/) as static site generator (HTML builder)
+
+    With the plugins:
+
+    - [11ty/eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight)
+
+2. [Pico CSS](https://picocss.com/) as CSS framework (web design)
+
+3. [Luxon](https://moment.github.io/luxon/) as wrapper for JavaScript dates and times
+
+4. [Prism](https://prismjs.com/) as lightweight, extensible syntax highlighter
 
 ## File organization
 
 ```txt
 <root>/
 ├─ docs/
-│  ├─ _includes_/
+│  ├─ _data_/
+│  │  └─ <type>.js
 │  ├─ _layouts/
+│  │  └─ <part>.njk
+│  ├─ _plugins/
+│  ├─ assets/
+│  │  └─ css/
+│  │     └─ <component>.css
 │  ├─ pages/
 │  ├─ posts/
 │  │  ├─ YYYY-MM-DD-xxx.md
-│  │  └─ <dir>.json           → general frontmatter (metadata) for all files in directory
-│  └─ index.md                → home page
-└─ eleventy.config.js         → main file
+│  │  └─ <dir>.json             → frontmatter (metadata) for all files in directory
+│  └─ index.md                  → home page
+└─ eleventy.config.js           → main file
 ```
 
 ## Local run

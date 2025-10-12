@@ -1,0 +1,14 @@
+a:has(> article) {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a:has(> article) article,
+a:has(> article) article * {
+  color: var(--pico-text-color);
+}
+
+a:has(> article):hover article {
+  background-color: var(--pico-primary-hover-background);
+}

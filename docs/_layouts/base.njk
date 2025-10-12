@@ -7,18 +7,20 @@
   <title>{{ title }} | DevPro.fr</title>
   <!-- <meta name="description" content="A pure HTML example, without dependencies."> -->
   <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="/css/prism-okaidia.css">
+  <link rel="stylesheet" href="/css/global.css">
 </head>
 
 <body>
   <header class="container">
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/services">Services</a></li>
+        <li><a href="/"><strong>DevPro</strong></a></li>
+      </ul>
+      <ul>
+        {% for item in navigation.top %}
+        <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
       </ul>
       <ul class="icons">
         <li>

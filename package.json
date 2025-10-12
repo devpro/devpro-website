@@ -20,7 +20,12 @@
   },
   "homepage": "https://github.com/devpro/devpro-website",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
     "@picocss/pico": "^2.1.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "luxon": "^3.7.2",
+    "prismjs": "^1.30.0"
   }
 }
