@@ -5,8 +5,10 @@ export default function (eleventyConfig) {
   eleventyConfig
     .addPassthroughCopy({
       'node_modules/@picocss/pico/css/pico.min.css': 'css/pico.min.css',
-      'node_modules/prismjs/themes/prism-okaidia.css': 'css/prism-okaidia.css',
-      'docs/assets/css': 'css'
+      'node_modules/prismjs/themes/prism-tomorrow.css': 'css/prism-tomorrow.css',
+      // 'node_modules/prismjs/themes': 'css',
+      'docs/assets/css': 'css',
+      'docs/assets/scripts': 'scripts'
     });
 
   eleventyConfig.addPlugin(syntaxHighlight);
