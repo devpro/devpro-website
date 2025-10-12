@@ -1,5 +1,5 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import datePlugin from "./docs/_plugins/datePlugin.js";
+import datePlugin from "./docs/_plugins/date-plugin.js";
 
 export default function (eleventyConfig) {
   eleventyConfig
@@ -10,6 +10,10 @@ export default function (eleventyConfig) {
       'docs/assets/css': 'css',
       'docs/assets/scripts': 'scripts'
     });
+
+  eleventyConfig.setServerOptions({
+    domDiff: false // needed for JS that is updating the DOM
+  });
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(datePlugin);

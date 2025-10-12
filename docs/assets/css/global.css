@@ -17,13 +17,19 @@ a:has(> article):hover article {
 
 pre {
   position: relative;
-  padding-top: 2.5rem; /* Space for button to align with first line */
+  padding-top: 2.5rem;
+  /* Space for button to align with first line */
+}
+
+pre>code,
+pre>samp {
+  padding: 0rem;
 }
 
 .copy-button {
   position: absolute;
-  top: 1.7rem;
-  right: 1.5rem;
+  top: 0.8rem;
+  right: 1.2rem;
   background: #2d2d2d;
   color: #fff;
   border: none;
