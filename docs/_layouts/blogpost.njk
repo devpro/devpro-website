@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<p>
+  <small>
+    Posted on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time> by <a href="#author">{{ author or 'Anonymous' }}</a>
+    <br>
+    {% for tag in tags %}
+    {% if tag != "posts" %}
+    <a href="/tags/{{ tag | slug }}" class="tag">{{ tag | capitalize | replaceHyphens }}</a>
+    {% endif %}
+    {% endfor %}
+  </small>
+</p>
+
+{{ content | safe }}

@@ -13,6 +13,54 @@ a:has(> article):hover article {
   background-color: var(--pico-primary-hover-background);
 }
 
+/* youtube video */
+
+.video-container {
+  position: relative;
+  padding-bottom: 45%;
+  /* 80% of 56.25% (16:9) = 45% to maintain aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 80%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* tags */
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  margin: 0.4rem 0.2rem 0.2rem 0;
+  border-radius: 0.5rem;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: background-color 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #e5e5e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background-color: #333;
+    color: #ddd;
+  }
+
+  .tag:hover {
+    background-color: #444;
+  }
+}
+
 /* breadcrumd */
 
 nav[aria-label="breadcrumb"] ol {
@@ -57,7 +105,6 @@ nav[aria-label="breadcrumb"] svg {
 pre {
   position: relative;
   padding-top: 2.5rem;
-  /* Space for button to align with first line */
 }
 
 pre>code,
@@ -102,6 +149,8 @@ pre>samp {
   background: #2d2d2d;
 }
 
-[data-theme="dark"] .copy-button:hover {
-  background: rgba(100, 100, 100, 0.5);
+@media (prefers-color-scheme: dark) {
+  .copy-button:hover {
+    background: rgba(100, 100, 100, 0.5);
+  }
 }

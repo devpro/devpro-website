@@ -1,10 +1,12 @@
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import datePlugin from "./docs/_plugins/date-plugin.js";
+import stringPlugin from "./docs/_plugins/string-plugin.js";
 
 export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(datePlugin);
+  eleventyConfig.addPlugin(stringPlugin);
 
   eleventyConfig
     .addPassthroughCopy({

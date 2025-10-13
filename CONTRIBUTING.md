@@ -50,3 +50,13 @@ Run locally the website:
 ```bash
 npm start
 ```
+
+## Tips
+
+- Add a comma while displaying a list
+
+```njk
+{% for tag in tags %}
+  <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}
+```

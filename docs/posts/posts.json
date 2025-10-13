@@ -1,6 +1,7 @@
 {
-  "layout": "base",
+  "layout": "blogpost",
   "permalink": "/{{ title | slugify }}/index.html",
   "tags": "posts",
-  "section": { "title": "Blog", "url": "/blog" }
+  "section": { "title": "Blog", "url": "/blog" },
+  "author": "Bertrand Thomas"
 }
