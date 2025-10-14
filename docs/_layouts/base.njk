@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/pico.min.css">
   <link rel="stylesheet" href="/css/prism-tomorrow.css">
   <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 </head>
 
 <body>
@@ -24,8 +25,15 @@
       </ul>
       <ul class="icons">
         <li>
-          <a rel="noopener noreferrer" class="outline" aria-label="Switch theme" href="#"
-            onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light')">
+          <a rel="noopener noreferrer" class="outline" aria-label="Search" href="/search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" class="outline theme-switcher" aria-label="Switch theme" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m14 5-3 3 2 7 8-8-7-2Z"></path>
@@ -72,9 +80,13 @@
         <li>{{ title }}</li>
       </ol>
     </nav>
-    <h1>{{ title }}</h1>
     {% endif %}
-    {{ content | safe }}
+    <div{% if includeInSearch %} data-pagefind-body{% endif %}>
+      {% if page.url != "/" %}
+      <h1>{{ title }}</h1>
+      {% endif %}
+      {{ content | safe }}
+    </div>
   </main>
   <footer class="container">
     <nav>
@@ -88,6 +100,7 @@
     </nav>
   </footer>
   <script src="/scripts/copy-button.js" defer></script>
+  <script src="/scripts/theme-switcher.js"></script>
 </body>
 
 </html>

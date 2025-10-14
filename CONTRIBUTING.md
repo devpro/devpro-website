@@ -16,6 +16,8 @@ The website is using:
 
 4. [Prism](https://prismjs.com/) as lightweight, extensible syntax highlighter
 
+5. [Pagefind](https://pagefind.app/) as static search engine
+
 ## File organization
 
 ```txt
@@ -52,6 +54,12 @@ npm start
 ```
 
 ## Tips
+
+- Get collection length
+
+```njk
+{% set postsCount = collections.posts | length %}
+```
 
 - Add a comma while displaying a list
 

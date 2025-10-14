@@ -3,5 +3,6 @@
   "permalink": "/{{ title | slugify }}/index.html",
   "tags": "posts",
   "section": { "title": "Blog", "url": "/blog" },
-  "author": "Bertrand Thomas"
+  "author": "Bertrand Thomas",
+  "includeInSearch": true
 }

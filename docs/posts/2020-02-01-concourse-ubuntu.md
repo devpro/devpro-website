@@ -1,5 +1,5 @@
 ---
-title: Concource CI on Ubuntu
+title: Concourse CI on Ubuntu
 tags: [how-to, automation, workflow]
 ---
 
