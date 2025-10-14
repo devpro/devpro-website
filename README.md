@@ -24,7 +24,7 @@ Biggest thanks to:
 
 Additional thanks to:
 
-- [Sébastien Lecacheur](https://slecache.com/) for blogging about Eleventy
+- [Sébastien Lecacheur](https://slecache.com/) for blogging about Eleventy (in particular [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/))
 
 ## 🌐 Live Website
 
