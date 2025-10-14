@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 
 export default function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-    return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+    return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "LLLL dd, yyyy");
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {

@@ -18,6 +18,8 @@ The website is using:
 
 5. [Pagefind](https://pagefind.app/) as static search engine
 
+6. [markdown-it](https://github.com/markdown-it/markdown-it) as Markdown parser (already used by Eleventy but needed for additional filters)
+
 ## File organization
 
 ```txt

@@ -151,6 +151,12 @@ pre>samp {
   background: rgba(100, 100, 100, 0.5);
 }
 
+/* code display */
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 0.95em;
+}
+
 /* Pagefind */
 
 .pagefind-ui {

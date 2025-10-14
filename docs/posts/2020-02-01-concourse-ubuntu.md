@@ -1,9 +1,13 @@
 ---
-title: Concourse CI on Ubuntu
-tags: [how-to, automation, workflow]
+title: Concourse CI on Ubuntu 18.04
+tags: [how-to, automation, workflow, linux]
 ---
 
-This steps were made on an Azure VM Ubuntu 18.04 LTS, in February 2020.
+Let's see how to install Concourse CI on Ubuntu 18.04.
+
+<!-- more -->
+
+This steps were validated on an Azure VM, in February 2020.
 
 ## Steps
 

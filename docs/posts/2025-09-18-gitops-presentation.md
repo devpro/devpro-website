@@ -5,6 +5,8 @@ tags: [automation, deployment]
 
 GitOps has quietly transformed the way we manage and deploy infrastructure, bringing a sense of clarity and control to the often chaotic world of IT.
 
+<!-- more -->
+
 At its core, GitOps is about **using Git as the single source of truth for both application code and infrastructure configuration**.
 
 By leveraging Git's version control, collaboration, and auditability, teams can streamline deployments, reduce errors, and foster a culture of transparency.
