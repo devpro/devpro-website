@@ -25,7 +25,7 @@ active:
     repoUrl: https://github.com/devpro/infrastructure-provisioning
     repoType: github
     description: Material to quickly setup any environment (particularly interested for Instruqt tracks)
-    technologies: []
+    technologies: [Linux]
   - title: MongoDB Backend for Terraform
     repoUrl: https://github.com/devpro/terraform-backend-mongodb
     repoType: github
