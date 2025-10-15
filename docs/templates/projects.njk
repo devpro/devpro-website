@@ -18,3 +18,11 @@ permalink: /projects/index.html
     {% include "project-card.njk" %}
   {% endfor %}
 </div>
+
+<h2>Maintenance mode</h2>
+
+<div class="grid">
+  {% for project in projects['maintenance'] %}
+    {% include "project-card.njk" %}
+  {% endfor %}
+</div>

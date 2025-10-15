@@ -1,5 +1,5 @@
 on-going:
-  - title: Technical Notes
+  - title: DevPro Technical Notes
     repoUrl: https://github.com/devpro/tech-notes
     repoType: github
     website: https://tech.devpro.fr/
@@ -18,13 +18,50 @@ active:
     repoUrl: https://github.com/devpro/keeptrack
     repoType: github
     description: Applications and libraries to save and review things we like & own, things we like & saw
-  - title: Sales Portal
-    repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
-    repoType: gitlab
-    website: https://kwt.devpro.fr/custom-charts/sales-portal
-    description: Solution to manage Sales activity, created for educational purposes
+  - title: Infrastructure provisioning
+    repoUrl: https://github.com/devpro/infrastructure-provisioning
+    repoType: github
+    description: Material to quickly setup any environment (particularly interested for Instruqt tracks)
   - title: MongoDB Backend for Terraform
     repoUrl: https://github.com/devpro/terraform-backend-mongodb
     repoType: github
     website: https://devpro.github.io/terraform-backend-mongodb/
     description: Terraform/OpenTofu HTTP backend (REST API) to manage & secure managed infrastructure state in a MongoDB database
+  - title: Sales Portal
+    repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
+    repoType: gitlab
+    website: https://kwt.devpro.fr/custom-charts/sales-portal
+    description: Solution to manage Sales activity, created for educational purposes
+maintenance:
+  - title: almops
+    repoUrl: https://github.com/devpro/almops
+    repoType: github
+    description: Command line tool to administrate ALM (Application lifecycle management) solutions such as Azure DevOps, GitHub, GitLab
+  - title: Cygnus
+    repoUrl: https://github.com/devpro/cygnus
+    repoType: github
+    description: Data synchronization tool, interesting for SQL to NoSQL migrations
+  - title: HubSpot .NET
+    repoUrl: https://github.com/devpro/hubspot-dotnet
+    repoType: github
+    description: .NET Core wrappers for the HubSpot API
+  - title: MongoDB Atlas .NET Client
+    repoUrl: https://github.com/devpro/mongodb-atlas-dotnet-client
+    repoType: github
+    description: MongoDB Atlas API client, written in C#, to automate your Cloud infrastructure
+  - title: ServiceNow .NET Client
+    repoUrl: https://github.com/devpro/servicenow-dotnet-client
+    repoType: github
+    description: .NET components (API & libraries) to simplify the integration with ServiceNow, from any system (Linux, MacOS, Windows)
+  - title: 2hire .NET Client
+    repoUrl: https://github.com/devpro/2hire-dotnet-client
+    repoType: github
+    description: .NET Core wrappers for the HubSpot API
+  - title: Withywoods
+    repoUrl: https://github.com/devpro/withywoods
+    repoType: github
+    description: Small independant .NET libraries (Standard/Core) to do better with less code and capitalize on best practices
+  - title: Yanport
+    repoUrl: https://github.com/devpro/yanport-dotnet-client
+    repoType: github
+    description: .NET client for Yanport, provider of real estate data
