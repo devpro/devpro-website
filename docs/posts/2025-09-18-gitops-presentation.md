@@ -1,6 +1,6 @@
 ---
 title: Embracing the GitOps revolution
-tags: [automation, deployment]
+tags: [automation, deployment, video]
 ---
 
 GitOps has quietly transformed the way we manage and deploy infrastructure, bringing a sense of clarity and control to the often chaotic world of IT.

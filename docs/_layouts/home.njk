@@ -6,7 +6,7 @@ layout: base
 
 <h2>Latest blog posts</h2>
 <ul>
-  {%- for post in collections.posts.reverse().slice(0, 5) %}
+  {%- for post in collections.posts | reverse | first(3) %}
   <li>
     <a href="{{ post.url }}">{{ post.data.title }}</a> - <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
     {%- if post.data.page.excerpt -%}

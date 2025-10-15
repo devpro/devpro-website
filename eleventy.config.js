@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import markdownIt from "markdown-it";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import arrayPlugin from './docs/_plugins/array-plugin.js';
 import datePlugin from "./docs/_plugins/date-plugin.js";
 import excerptPlugin from './docs/_plugins/excerpt-plugin.js';
 import stringPlugin from "./docs/_plugins/string-plugin.js";
@@ -24,9 +25,10 @@ export default function (eleventyConfig) {
     });
 
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
+  eleventyConfig.addPlugin(arrayPlugin);
   eleventyConfig.addPlugin(datePlugin);
-  eleventyConfig.addPlugin(stringPlugin);
   eleventyConfig.addPlugin(excerptPlugin, markdownParser);
+  eleventyConfig.addPlugin(stringPlugin);
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({

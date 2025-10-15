@@ -7,7 +7,9 @@ layout: base
   <article>
     <p><strong>{{ post.data.title }}</strong></p>
     <p>Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
-    <p>Short excerpt of the blog post content to entice the reader to click and read more.</p>
+    {%- if post.data.page.excerpt -%}
+    <p><small>{{ post.data.page.excerpt | toHtml | safe}}</small></p>
+    {%- endif -%}
   </article>
 </a>
 {%- endfor %}

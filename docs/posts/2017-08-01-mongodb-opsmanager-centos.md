@@ -1,6 +1,6 @@
 ---
 title: MongoDB Ops Manager on CentOS
-tags: [how-to, database, nosql, automation, linux]
+tags: [how-to, database, automation, linux]
 ---
 
 Let's see how to install CentOS.
