@@ -17,7 +17,7 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn how to get started.
 
 ## 🙏 Acknowledgments
 
-Biggest thanks to:
+Huge thanks to:
 
 - [Zach Leatherman](https://www.zachleat.com/) for creating and maintaining Eleventy
 - [Lucas Larroche](https://lucaslarroche.com/) for building Pico CSS
@@ -25,6 +25,7 @@ Biggest thanks to:
 Additional thanks to:
 
 - [Sébastien Lecacheur](https://slecache.com/) for blogging about Eleventy (in particular [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/))
+- [Eleanor Holley](https://webbureaucrat.dev/) for blogging about Eleventy (in particular [How to Use Excerpts in Eleventy](https://webbureaucrat.dev/articles/eleventy-excerpts/))
 
 ## 🌐 Live Website
 

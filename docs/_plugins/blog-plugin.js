@@ -8,6 +8,13 @@ export default function (eleventyConfig, markdownParser) {
     return markdownParser.renderInline(content);
   });
 
+  eleventyConfig.addFilter("filterByYear", (posts, year) => {
+    return posts.filter(post => {
+      const postYear = new Date(post.date).getFullYear();
+      return postYear === year;
+    });
+  });
+
   // eleventyConfig.addPairedShortcode('excerpt', function (content, post) {
   //   let excerpt = post.data.excerpt || post.data.page?.excerpt;
   //   if (!excerpt) {
