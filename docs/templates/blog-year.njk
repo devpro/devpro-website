@@ -1,0 +1,29 @@
+---
+pagination:
+  data: years
+  size: 1
+  alias: year
+eleventyComputed:
+  title: Posts from {{ year }}
+permalink: /blog/{{ year }}/index.html
+section:
+  title: "Blog"
+  url: "/blog"
+---
+
+{%- set postsInYear = collections.posts | filterByYear(year) %}
+{%- if postsInYear.length %}
+  {%- for post in postsInYear | reverse %}
+    <a href="{{ post.url }}">
+      <article>
+        <p><strong>{{ post.data.title }}</strong></p>
+        <p>Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
+        {%- if post.data.page.excerpt -%}
+        <p><small>{{ post.data.page.excerpt | toHtml | safe }}</small></p>
+        {%- endif -%}
+      </article>
+    </a>
+  {%- endfor %}
+{%- else %}
+  <p>No posts found for {{ year }}.</p>
+{%- endif %}

@@ -17,11 +17,11 @@ a:has(> article):hover article {
 
 .video-container {
   position: relative;
-  padding-bottom: 45%;
+  max-width: 80%;
   /* 80% of 56.25% (16:9) = 45% to maintain aspect ratio */
+  padding-bottom: 45%;
   height: 0;
   overflow: hidden;
-  max-width: 80%;
 }
 
 .video-container iframe {
@@ -152,6 +152,7 @@ pre>samp {
 }
 
 /* code display */
+
 pre[class*="language-"],
 code[class*="language-"] {
   font-size: 0.95em;
@@ -188,4 +189,47 @@ code[class*="language-"] {
 .pagefind-ui__results {
   margin-left: 0;
   float: none;
+}
+
+/* blog page */
+
+.year-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.year-buttons a[role="button"] {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.year-buttons a[role="button"]:hover {
+  background-color: hsl(200 20% 85%);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .year-buttons a[role="button"]:hover {
+  background-color: hsl(200 20% 30%);
+}
+
+/* Article Styling */
+article {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  article:hover {
+    background-color: hsl(200 20% 95%);
+  }
+}
+
+[data-theme="dark"] {
+  article:hover {
+    background-color: hsl(200 20% 20%);
+  }
 }

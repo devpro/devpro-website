@@ -1,6 +1,8 @@
 # Contributing
 
-## Design
+## Solution design
+
+### Dependencies
 
 The website is using:
 
@@ -20,25 +22,34 @@ The website is using:
 
 6. [markdown-it](https://github.com/markdown-it/markdown-it) as Markdown parser (already used by Eleventy but needed for additional filters)
 
-## File organization
+### File organization
 
 ```txt
 <root>/
 ├─ docs/
 │  ├─ _data_/
-│  │  └─ <type>.js
+│  │  ├─ <type>.js
+│  │  └─ <type>.json
 │  ├─ _layouts/
 │  │  └─ <part>.njk
 │  ├─ _plugins/
+│  │  └─ <type>-plugin.js
 │  ├─ assets/
 │  │  └─ css/
+│  │     └─ global.css
+│  │  └─ scripts/
 │  │     └─ <component>.css
 │  ├─ pages/
+│  │  ├─ <page>.md
+│  │  └─ pages.json
 │  ├─ posts/
 │  │  ├─ YYYY-MM-DD-xxx.md
-│  │  └─ <dir>.json             → frontmatter (metadata) for all files in directory
+│  │  └─ posts.json
+│  ├─ templates/
+│  │  ├─ <template>.njk
+│  │  └─ templates.json
 │  └─ index.md                  → home page
-└─ eleventy.config.js           → main file
+└─ eleventy.config.js           → main file for Eleventy
 ```
 
 ## Local run
@@ -70,3 +81,5 @@ npm start
   <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
 ```
+
+- Eleventy ignore files in folders starting with an underscore while building site files

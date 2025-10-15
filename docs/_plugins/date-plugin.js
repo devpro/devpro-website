@@ -8,4 +8,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
   });
+
+  eleventyConfig.addFilter("filterByYear", (posts, year) => {
+    return posts.filter(post => {
+      const postYear = new Date(post.date).getFullYear();
+      return postYear === year;
+    });
+  });
 };
