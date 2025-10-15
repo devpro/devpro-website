@@ -14,15 +14,7 @@ section:
 {%- set postsWithTag = collections[tag] %}
 {%- if postsWithTag.length %}
   {%- for post in postsWithTag | reverse %}
-    <a href="{{ post.url }}">
-      <article>
-        <p><strong>{{ post.data.title }}</strong></p>
-        <p>Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
-        {%- if post.data.page.excerpt -%}
-        <p><small>{{ post.data.page.excerpt | toHtml | safe }}</small></p>
-        {%- endif -%}
-      </article>
-    </a>
+  {% include "blogpost-card.njk" %}
   {%- endfor %}
 {%- else %}
   <p>No posts found about {{ tag }}.</p>

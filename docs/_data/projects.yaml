@@ -25,18 +25,19 @@ active:
     repoUrl: https://github.com/devpro/infrastructure-provisioning
     repoType: github
     description: Material to quickly setup any environment (particularly interested for Instruqt tracks)
+    technologies: []
   - title: MongoDB Backend for Terraform
     repoUrl: https://github.com/devpro/terraform-backend-mongodb
     repoType: github
     website: https://devpro.github.io/terraform-backend-mongodb/
     description: Terraform/OpenTofu HTTP backend (REST API) to manage & secure managed infrastructure state in a MongoDB database
-    technologies: [Terraform]
+    technologies: [.NET, MongoDB, Terraform]
   - title: Sales Portal
     repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
     repoType: gitlab
     website: https://kwt.devpro.fr/custom-charts/sales-portal
     description: Solution to manage Sales activity, created for educational purposes
-    technologies: [.NET, Kubernetes, MongoDB]
+    technologies: [.NET, MongoDB, Kubernetes]
 maintenance:
   - title: almops
     repoUrl: https://github.com/devpro/almops
@@ -47,7 +48,7 @@ maintenance:
     repoUrl: https://github.com/devpro/cygnus
     repoType: github
     description: Data synchronization tool, interesting for SQL to NoSQL migrations
-    technologies: [.NET]
+    technologies: [.NET, MongoDB]
   - title: HubSpot .NET
     repoUrl: https://github.com/devpro/hubspot-dotnet
     repoType: github

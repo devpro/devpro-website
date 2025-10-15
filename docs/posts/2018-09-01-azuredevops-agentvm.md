@@ -5,6 +5,8 @@ tags: [how-to, automation, workflow]
 
 Let's see how to use a virtual machine as Azure DevOps agent.
 
+<!-- more -->
+
 ## Requirements
 
 You need to be administrator of the virtual machine (VM).

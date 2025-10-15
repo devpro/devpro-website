@@ -4,14 +4,41 @@ layout: base
 
 {{ content | safe }}
 
-<h2>Latest blog posts</h2>
-<ul>
-  {%- for post in collections.posts | reverse | first(3) %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a> - <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {%- if post.data.page.excerpt -%}
-    <p><small>{{ post.data.page.excerpt | toHtml | safe}}</small></p>
-    {%- endif -%}
-  </li>
-  {%- endfor %}
-</ul>
+<div class="grid">
+  <div>
+    <h2>Recent blog posts</h2>
+    <div>
+      {%- for post in collections.posts | reverse | first(3) %}
+      <div>
+        <div>
+          <small><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>
+        </div>
+        <div>
+          <a href="{{ post.url }}">{{ post.data.title }}</a></time>
+          {%- if post.data.page.excerpt -%}
+          <p><small>{{ post.data.page.excerpt | toHtml | safe}}</small></p>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p><a href="/blog">All posts</a></p>
+  </div>
+  <div>
+    <h2>Latest news</h2>
+    <div>
+      {%- for news in collections.news | reverse | first(5) %}
+      <div>
+        <div>
+          <small><time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time></small>
+        </div>
+        <div>
+          <a href="{{ news.data.link }}" target="_blank">{{ news.data.title }}</a>
+          <p><small>{{ news.data.description }}</small></p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p><a href="/news">All news</a></p>
+  </div>
+</div>

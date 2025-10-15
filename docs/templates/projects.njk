@@ -4,26 +4,23 @@ permalink: /projects/index.html
 includeInSearch: true
 ---
 
-<h2>Current projects</h2>
-
-<div class="grid">
-  {% for project in projects['on-going'] %}
-    {% include "project-card.njk" %}
-  {% endfor %}
-</div>
-
-<h2>Active projects</h2>
-
-<div class="grid">
-  {% for project in projects['active'] %}
-    {% include "project-card.njk" %}
-  {% endfor %}
-</div>
-
-<h2>Maintenance mode</h2>
-
-<div class="grid">
-  {% for project in projects['maintenance'] %}
-    {% include "project-card.njk" %}
-  {% endfor %}
+<div class="projects">
+  <h2>Current projects</h2>
+  <div class="grid">
+    {% for project in projects['on-going'] %}
+      {% include "project-card.njk" %}
+    {% endfor %}
+  </div>
+  <h2>Active projects</h2>
+  <div class="grid">
+    {% for project in projects['active'] %}
+      {% include "project-card.njk" %}
+    {% endfor %}
+  </div>
+  <h2>Maintenance mode</h2>
+  <div class="grid">
+    {% for project in projects['maintenance'] %}
+      {% include "project-card.njk" %}
+    {% endfor %}
+  </div>
 </div>

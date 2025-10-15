@@ -1,3 +1,15 @@
+
+/* general */
+
+time {
+  color: #6F7887;
+}
+
+a:has(> article) article time,
+a:has(> article) article time {
+  color: #6F7887;
+}
+
 a:has(> article) {
   text-decoration: none;
   color: inherit;
@@ -351,7 +363,7 @@ article {
   fill: #ecf0f1;
 }
 
-.grid {
+.projects .grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, 400px) !important;
   gap: 1rem;
@@ -362,7 +374,7 @@ article {
 }
 
 @media (max-width: 768px) {
-  .grid {
+  .projects .grid {
     grid-template-columns: 400px !important;
   }
 }

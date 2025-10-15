@@ -12,13 +12,5 @@ permalink: /blog/index.html
 
 <h2>Most recent posts</h2>
 {%- for post in collections.posts | reverse | first(10) %}
-<a href="{{ post.url }}">
-  <article>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    <h3>{{ post.data.title }}</h3>
-    {%- if post.data.page.excerpt -%}
-    <small>{{ post.data.page.excerpt | toHtml | safe}}</small>
-    {%- endif -%}
-  </article>
-</a>
+{% include "blogpost-card.njk" %}
 {%- endfor %}

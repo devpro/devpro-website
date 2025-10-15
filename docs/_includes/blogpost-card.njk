@@ -1,0 +1,9 @@
+<a href="{{ post.url }}">
+  <article>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <h3>{{ post.data.title }}</h3>
+    {%- if post.data.page.excerpt -%}
+    <small>{{ post.data.page.excerpt | toHtml | safe}}</small>
+    {%- endif -%}
+  </article>
+</a>
