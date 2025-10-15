@@ -1,0 +1,20 @@
+---
+title: Projects
+permalink: /projects/index.html
+---
+
+<h2>Current projects</h2>
+
+<div class="grid">
+  {% for project in projects['on-going'] %}
+    {% include "project-card.njk" %}
+  {% endfor %}
+</div>
+
+<h2>Active projects</h2>
+
+<div class="grid">
+  {% for project in projects['active'] %}
+    {% include "project-card.njk" %}
+  {% endfor %}
+</div>

@@ -22,6 +22,8 @@ The website is using:
 
 6. [markdown-it](https://github.com/markdown-it/markdown-it) as Markdown parser (already used by Eleventy but needed for additional filters)
 
+7. [js-yaml](https://github.com/nodeca/js-yaml) as YAML data loader (js/json by default with Eleventy global data)
+
 ### File organization
 
 ```txt

@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
-import markdownIt from "markdown-it";
-import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import yaml from 'js-yaml';
+import markdownIt from 'markdown-it';
+import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
 import arrayPlugin from './docs/_plugins/array-plugin.js';
 import blogPlugin from './docs/_plugins/blog-plugin.js';
 import datePlugin from "./docs/_plugins/date-plugin.js";
@@ -16,6 +17,9 @@ export default function (eleventyConfig) {
   let markdownParser = markdownIt(markdownOptions);
   // eleventyConfig.setLibrary('md', markdownParser);
 
+  // adds yaml support in global data
+  eleventyConfig.addDataExtension('yaml, yml', contents => yaml.load(contents));
+
   // copies assets to built site
   eleventyConfig
     .addPassthroughCopy({
@@ -25,21 +29,12 @@ export default function (eleventyConfig) {
       'docs/assets/scripts': 'scripts'
     });
 
-  // adds filters
+  // adds filters and collections
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(arrayPlugin);
   eleventyConfig.addPlugin(blogPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
   eleventyConfig.addPlugin(stringPlugin);
-
-  eleventyConfig.addCollection("tagList", function(collectionApi) {
-    const tagsSet = new Set();
-    collectionApi.getAll().forEach(item => {
-      const tags = item.data.tags || [];
-      tags.filter(tag => !['posts'].includes(tag)).forEach(tag => tagsSet.add(tag));
-    });
-    return [...tagsSet].sort();
-  });
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({

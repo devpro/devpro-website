@@ -1,0 +1,30 @@
+on-going:
+  - title: Technical Notes
+    repoUrl: https://github.com/devpro/tech-notes
+    repoType: github
+    website: https://tech.devpro.fr/
+    description: Notes about Information Technology
+  - title: Kube Workload Toolkit
+    repoUrl: https://github.com/devpro/helm-charts
+    repoType: github
+    website: https://kwt.devpro.fr/
+    description: Custom Helm charts and clear documentation to ease Kubernetes workload deployment
+  - title: Kubernetes Essentials
+    repoUrl: https://github.com/devpro/kubernetes-essentials
+    repoType: github
+    description: Training material about Kubernetes
+active:
+  - title: Keeptrack
+    repoUrl: https://github.com/devpro/keeptrack
+    repoType: github
+    description: Applications and libraries to save and review things we like & own, things we like & saw
+  - title: Sales Portal
+    repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
+    repoType: gitlab
+    website: https://kwt.devpro.fr/custom-charts/sales-portal
+    description: Solution to manage Sales activity, created for educational purposes
+  - title: MongoDB Backend for Terraform
+    repoUrl: https://github.com/devpro/terraform-backend-mongodb
+    repoType: github
+    website: https://devpro.github.io/terraform-backend-mongodb/
+    description: Terraform/OpenTofu HTTP backend (REST API) to manage & secure managed infrastructure state in a MongoDB database

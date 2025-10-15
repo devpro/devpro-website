@@ -10,7 +10,7 @@ permalink: /blog/index.html
   {% endfor %}
 </div>
 
-<h2>Most recent</h2>
+<h2>Most recent posts</h2>
 {%- for post in collections.posts | reverse | first(10) %}
 <a href="{{ post.url }}">
   <article>
