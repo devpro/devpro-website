@@ -14,13 +14,13 @@ on-going:
     repoUrl: https://github.com/devpro/kubernetes-essentials
     repoType: github
     description: Training material about Kubernetes
-    technologies: [Kubernetes]
+    technologies: [Docker, Kubernetes]
 active:
   - title: Keeptrack
     repoUrl: https://github.com/devpro/keeptrack
     repoType: github
     description: Applications and libraries to save and review things we like & own, things we like & saw
-    technologies: [.NET, MongoDB]
+    technologies: [Angular, .NET, MongoDB]
   - title: Infrastructure provisioning
     repoUrl: https://github.com/devpro/infrastructure-provisioning
     repoType: github
