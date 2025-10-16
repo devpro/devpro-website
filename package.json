@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "clean": "rm -rf ./_site"
+    "clean": "rm -rf ./_site",
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
