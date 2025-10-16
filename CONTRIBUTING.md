@@ -29,9 +29,12 @@ The website is using:
 ```txt
 <root>/
 ├─ docs/
-│  ├─ _data_/
+│  ├─ _data/
 │  │  ├─ <type>.js
 │  │  └─ <type>.json
+│  │  └─ <type>.yaml
+│  ├─ _include/
+│  │  └─ <part>.json
 │  ├─ _layouts/
 │  │  └─ <part>.njk
 │  ├─ _plugins/
@@ -40,7 +43,10 @@ The website is using:
 │  │  └─ css/
 │  │     └─ global.css
 │  │  └─ scripts/
-│  │     └─ <component>.css
+│  │     └─ <component>.js
+│  ├─ news/
+│  │  ├─ <news>.md
+│  │  └─ news.json
 │  ├─ pages/
 │  │  ├─ <page>.md
 │  │  └─ pages.json
