@@ -3,16 +3,16 @@ title: News
 permalink: /news/index.html
 ---
 
-<div class="news-timeline">
+<div>
   {%- for news in collections.news | reverse %}
-    <div class="news-item">
-      <div class="news-meta">
-        <time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time>
-      </div>
-      <div class="news-content">
-        <h3><a href="{{ news.data.link }}" target="_blank">{{ news.data.title }}</a></h3>
-        <p>{{ news.data.description }}</p>
-      </div>
+  <div>
+    <div>
+      <time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time>
     </div>
+    <div>
+      <h4><a href="{{ news.data.link }}" target="_blank">{{ news.data.title }}</a></h4>
+      <p>{{ news.data.description }}</p>
+    </div>
+  </div>
   {%- endfor %}
 </div>
