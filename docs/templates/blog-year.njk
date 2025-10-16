@@ -1,0 +1,21 @@
+---
+pagination:
+  data: years
+  size: 1
+  alias: year
+eleventyComputed:
+  title: Posts from {{ year }}
+permalink: /blog/{{ year }}/index.html
+section:
+  title: "Blog"
+  url: "/blog"
+---
+
+{%- set postsInYear = collections.posts | filterByYear(year) %}
+{%- if postsInYear.length %}
+  {%- for post in postsInYear | reverse %}
+  {% include "blogpost-card.njk" %}
+  {%- endfor %}
+{%- else %}
+  <p>No posts found for {{ year }}.</p>
+{%- endif %}

@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+eleventyComputed:
+  title: Posts about {{ tag }}
+permalink: /tags/{{ tag | slugify }}/index.html
+section:
+  title: "Blog"
+  url: "/blog"
+---
+
+{%- set postsWithTag = collections[tag] %}
+{%- if postsWithTag.length %}
+  {%- for post in postsWithTag | reverse %}
+  {% include "blogpost-card.njk" %}
+  {%- endfor %}
+{%- else %}
+  <p>No posts found about {{ tag }}.</p>
+{%- endif %}

@@ -1,0 +1,72 @@
+- name: Auditing
+  description: Comprehensive audits to evaluate and optimize your team's workflows and infrastructure management.
+  offeringListTitle: Assessment Scopes
+  missions:
+    - title: DevOps Maturity
+      description: Assess your DevOps practices to identify strengths and opportunities for improvement.
+      duration: 1-2 weeks
+    - title: Organizational Effectiveness
+      description: Analyze team structures and processes to enhance productivity and collaboration.
+      duration: 1-2 weeks
+    - title: System Reliability and High Availability
+      description: Evaluate infrastructure to ensure robust, scalable, and highly available systems.
+      duration: 1-2 weeks
+- name: Coaching
+  description: Expert guidance to empower your teams with modern practices and technical excellence.
+  offeringListTitle: Specialties
+  missions:
+    - title: Agile Methodologies
+      description: Implement Agile frameworks like Scrum and Kanban using tools such as Jira and Azure DevOps.
+      duration: Varies
+    - title: Quality Assurance
+      description: Enhance testing strategies with automated tools like Playwright and a balanced testing pyramid.
+      duration: Varies
+    - title: DevSecOps Transformations
+      description: Optimize workflows with value stream mapping, CI/CD pipelines, Git flows, and shift-left practices.
+      duration: Varies
+    - title: Software Development
+      description: Adopt best practices like Test-Driven Development (TDD) and low-coupling architecture.
+      duration: Varies
+    - title: Operational Excellence
+      description: Streamline operations with GitOps, Infrastructure as Code (IaC), and advanced observability.
+      duration: Varies
+- name: Consulting
+  description: Strategic expertise to modernize systems and streamline technical operations.
+  offeringListTitle: Engagement Types
+  missions:
+    - title: Application Modernization
+      description: Transform legacy applications into scalable, modern solutions tailored to your needs.
+      duration: Varies
+    - title: Automation
+      description: Automate CI/CD pipelines, infrastructure, testing, and observability for efficiency.
+      duration: Varies
+    - title: Cloud Native Migration
+      description: Transition to Cloud Native architectures using containers, Kubernetes, Helm, and secure practices.
+      duration: Varies
+    - title: Information System Architecture
+      description: Design robust, scalable architectures to support your business objectives.
+      duration: Varies
+    - title: Technical Support
+      description: Provide expert support for backend (.NET), frontend (Angular), databases, Kubernetes and Cloud platforms.
+      duration: Varies
+- name: Technical Marketing
+  description: Compelling strategies to promote your company and drive sales of your solutions.
+  offeringListTitle: Upselling Actions
+  missions:
+    - title: Hands-on Workshop Material
+      description: Develop interactive, high-impact workshop content for live or on-site events.
+      duration: Varies
+    - title: Technical Advocacy
+      description: Create engaging slides, webinars, and event materials to boost your brand's presence.
+      duration: Varies
+- name: Training
+  description: Best-in-class training content to streamline onboarding for your team and customers.
+  offeringListTitle: Content Types
+  missions:
+    - title: Custom-Made Programs
+      description: Deliver tailored training sessions to meet the specific needs of your team or customers.
+      location: On-site or Remote
+      duration: Varies
+    - title: Self-Paced Learning
+      description: Provide flexible, high-quality content for independent learning, tailored for teams and customers.
+      duration: Varies

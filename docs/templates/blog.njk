@@ -1,0 +1,16 @@
+---
+title: Blog
+permalink: /blog/index.html
+---
+
+<h2>Posts by year</h2>
+<div class="year-buttons">
+  {% for year in years %}
+  <a href="/blog/{{ year }}/" role="button" class="outline">{{ year }}</a>
+  {% endfor %}
+</div>
+
+<h2>Most recent posts</h2>
+{%- for post in collections.posts | reverse | first(10) %}
+{% include "blogpost-card.njk" %}
+{%- endfor %}

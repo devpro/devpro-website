@@ -1,0 +1,18 @@
+---
+title: News
+permalink: /news/index.html
+---
+
+<div>
+  {%- for news in collections.news | reverse %}
+  <div>
+    <div>
+      <time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time>
+    </div>
+    <div>
+      <h4><a href="{{ news.data.link }}" target="_blank">{{ news.data.title }}</a></h4>
+      <p>{{ news.data.description }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

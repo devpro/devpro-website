@@ -1,0 +1,34 @@
+{
+  "name": "devpro-website",
+  "version": "1.0.0",
+  "description": "Content for devpro.fr website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf ./_site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devpro/devpro-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devpro/devpro-website/issues"
+  },
+  "homepage": "https://github.com/devpro/devpro-website",
+  "dependencies": {
+    "@picocss/pico": "^2.1.1",
+    "prismjs": "^1.30.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.7.2",
+    "markdown-it": "^14.1.0",
+    "pagefind": "^1.4.0"
+  }
+}
