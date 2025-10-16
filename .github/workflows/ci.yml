@@ -7,20 +7,21 @@ on:
   workflow_dispatch: {}
 
 env:
-  python_version: "3.10"
+  node_version: "24"
+  python_version: "3.13"
 
 jobs:
   check-code:
     runs-on: ubuntu-latest
     steps:
       - name: Checks-out the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Lints Markdown files
-        uses: DavidAnson/markdownlint-cli2-action@v16
+        uses: DavidAnson/markdownlint-cli2-action@v20
         with:
-          globs: '**/*.md'
+          globs: "**/*.md"
       - name: Set up Python ${{ env.python_version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.python_version }}
       - name: Install Pythons packages
@@ -30,6 +31,10 @@ jobs:
       - name: Lint YAML files
         run: |
           yamllint .
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.node_version }}
+          cache: npm
       - name: Install JavaScript dependencies
         run: npm install
       - name: Build website
