@@ -1,0 +1,32 @@
+---
+title: Services
+permalink: /services/index.html
+---
+
+<p>Here is a high-level overview of the services I provide to organizations, either as a freelancer or on short or long-term contracts.</p>
+<br>
+
+{% for service in services %}
+<article>
+  <h2>{{ service.name }}</h2>
+  <p>{{ service.description }}</p>
+  <details>
+    <summary><strong>{{ service.offeringListTitle }}</strong></summary>
+    <ul>
+      {% for mission in service.missions %}
+      <li>
+        <h3>{{ mission.title }}</h3>
+        <p>{{ mission.description }}</p>
+        {% if mission.duration %}
+        <strong>Duration:</strong> {{ mission.duration }}<br>
+        {% endif %}
+        {% if mission.location %}
+        <strong>Location:</strong> {{ mission.location }}<br>
+        {% endif %}
+        <br>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+</article>
+{% endfor %}

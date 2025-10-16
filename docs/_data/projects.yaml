@@ -21,21 +21,20 @@ active:
     repoType: github
     description: Applications and libraries to save and review things we like & own, things we like & saw
     technologies: [Angular, .NET, MongoDB]
-  - title: Infrastructure provisioning
+  - title: Infrastructure Setup
     repoUrl: https://github.com/devpro/infrastructure-provisioning
     repoType: github
-    description: Material to quickly setup any environment (particularly interested for Instruqt tracks)
+    description: Material to quickly setup any environment (particularly interesting for Instruqt tracks)
     technologies: [Linux]
-  - title: MongoDB Backend for Terraform
+  - title: Terraform MongoDB Backend
     repoUrl: https://github.com/devpro/terraform-backend-mongodb
     repoType: github
     website: https://devpro.github.io/terraform-backend-mongodb/
-    description: Terraform/OpenTofu HTTP backend (REST API) to manage & secure managed infrastructure state in a MongoDB database
+    description: Terraform/OpenTofu HTTP backend to manage state in a MongoDB database
     technologies: [.NET, MongoDB, Terraform]
   - title: Sales Portal
     repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
     repoType: gitlab
-    website: https://kwt.devpro.fr/custom-charts/sales-portal
     description: Solution to manage Sales activity, created for educational purposes
     technologies: [.NET, MongoDB, Kubernetes]
 maintenance:
@@ -54,17 +53,17 @@ maintenance:
     repoType: github
     description: .NET Core wrappers for the HubSpot API
     technologies: [.NET]
-  - title: MongoDB Atlas .NET Client
+  - title: MongoDB Atlas .NET
     repoUrl: https://github.com/devpro/mongodb-atlas-dotnet-client
     repoType: github
     description: MongoDB Atlas API client, written in C#, to automate your Cloud infrastructure
     technologies: [.NET, MongoDB]
-  - title: ServiceNow .NET Client
+  - title: ServiceNow .NET
     repoUrl: https://github.com/devpro/servicenow-dotnet-client
     repoType: github
     description: .NET components (API & libraries) to simplify the integration with ServiceNow, from any system (Linux, MacOS, Windows)
     technologies: [.NET]
-  - title: 2hire .NET Client
+  - title: 2hire .NET
     repoUrl: https://github.com/devpro/2hire-dotnet-client
     repoType: github
     description: .NET Core wrappers for the HubSpot API
@@ -74,7 +73,7 @@ maintenance:
     repoType: github
     description: Small independant .NET libraries (Standard/Core) to do better with less code and capitalize on best practices
     technologies: [.NET]
-  - title: Yanport
+  - title: Yanport .NET
     repoUrl: https://github.com/devpro/yanport-dotnet-client
     repoType: github
     description: .NET client for Yanport, provider of real estate data
