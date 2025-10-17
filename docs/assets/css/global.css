@@ -253,7 +253,7 @@ nav[aria-label="breadcrumb"] svg {
 
 .project-card {
   margin-bottom: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
