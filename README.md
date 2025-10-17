@@ -24,8 +24,9 @@ Huge thanks to:
 
 Additional thanks to:
 
-- [Sébastien Lecacheur](https://slecache.com/) for blogging about Eleventy (in particular [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/))
-- [Eleanor Holley](https://webbureaucrat.dev/) for blogging about Eleventy (in particular [How to Use Excerpts in Eleventy](https://webbureaucrat.dev/articles/eleventy-excerpts/))
+- [Brent Arias](https://codepen.io/brentarias) for [CodePen Pico CSS Responsive Hamburger](https://codepen.io/brentarias/pen/gOQybod)
+- [Eleanor Holley](https://webbureaucrat.dev/) for [How to Use Excerpts in Eleventy](https://webbureaucrat.dev/articles/eleventy-excerpts/)
+- [Sébastien Lecacheur](https://slecache.com/) for [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/)
 
 ## 🌐 Live Website
 

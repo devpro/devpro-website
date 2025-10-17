@@ -14,13 +14,13 @@
 
 <body>
   <header class="container">
-    <nav>
-      <ul>
-        <li><a href="/" class="secondary"><strong>DevPro</strong></a></li>
+    <nav class="container">
+      <ul class="home-menu">
+        <li class="item"><a href="/" class="secondary"><strong>DevPro</strong></a></li>
       </ul>
-      <ul>
+      <ul class="main-menu">
         {% for item in navigation.top %}
-        <li><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        <li class="item"><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {% endfor %}
       </ul>
       <ul class="icons">
@@ -34,8 +34,7 @@
         </li>
         <li>
           <a rel="noopener noreferrer" class="outline theme-switcher" aria-label="Switch theme" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m14 5-3 3 2 7 8-8-7-2Z"></path>
               <path d="m14 5-3 3-3-3 3-3 3 3Z"></path>
               <path d="M9.5 6.5 4 12l3 6"></path>
@@ -58,6 +57,16 @@
             </svg>
           </a>
         </li>
+      </ul>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn">
+        <span class="nav-icon" style="font-size: 1.8em">&#x2261;</span>
+      </label>
+      <ul class="menu">
+        <li class="item"><a href="/" class="secondary"><strong>DevPro</strong></a></li>
+        {% for item in navigation.top %}
+        <li class="item"><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </header>

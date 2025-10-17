@@ -25,6 +25,47 @@ a:has(> article):hover article {
   background-color: var(--pico-primary-hover-background);
 }
 
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 0.95em;
+}
+
+pre {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+pre>code,
+pre>samp {
+  padding: 0rem;
+}
+
+article {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+:root:not([data-theme="dark"]),
+[data-theme="light"] {
+  article:hover {
+    background-color: hsl(200 20% 95%);
+  }
+}
+
+[data-theme="dark"] {
+  article:hover {
+    background-color: hsl(200 20% 20%);
+  }
+}
+
+/* home page */
+
+.welcome {
+  padding: 1rem 0 1.5rem 0;
+}
+
 /* youtube video */
 
 .video-container {
@@ -44,7 +85,7 @@ a:has(> article):hover article {
   height: 100%;
 }
 
-/* tags */
+/* tag */
 
 .tag {
   display: inline-block;
@@ -110,17 +151,7 @@ nav[aria-label="breadcrumb"] svg {
   border: 0;
 }
 
-/* design of copy button in code display */
-
-pre {
-  position: relative;
-  padding-top: 2.5rem;
-}
-
-pre>code,
-pre>samp {
-  padding: 0rem;
-}
+/* copy button on code */
 
 .copy-button {
   position: absolute;
@@ -163,14 +194,7 @@ pre>samp {
   background: rgba(100, 100, 100, 0.5);
 }
 
-/* code display */
-
-pre[class*="language-"],
-code[class*="language-"] {
-  font-size: 0.95em;
-}
-
-/* Pagefind */
+/* search field and results */
 
 .pagefind-ui {
   --pagefind-ui-font: system-ui, -apple-system, sans-serif;
@@ -203,7 +227,7 @@ code[class*="language-"] {
   float: none;
 }
 
-/* blog page */
+/* blog posts per year */
 
 .year-buttons {
   display: flex;
@@ -225,39 +249,17 @@ code[class*="language-"] {
   background-color: hsl(200 20% 30%);
 }
 
-article {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease;
-}
-
-:root:not([data-theme="dark"]),
-[data-theme="light"] {
-  article:hover {
-    background-color: hsl(200 20% 95%);
-  }
-}
-
-[data-theme="dark"] {
-  article:hover {
-    background-color: hsl(200 20% 20%);
-  }
-}
-
 /* projects */
 
 .project-card {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%;
   background-color: #f0f4f8;
   border: 1px solid #d3dfe6;
-  width: 400px;
 }
 
 .project-card header {
@@ -283,7 +285,7 @@ article {
   line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #555;
 }
 
@@ -369,12 +371,84 @@ article {
   gap: 1rem;
   margin-left: 0;
   margin-right: auto;
-  padding: 1rem 0 2rem 0;
+  padding: 0.5rem 0 1rem 0;
   max-width: none;
 }
 
 @media (max-width: 768px) {
   .projects .grid {
-    grid-template-columns: 400px !important;
+    grid-template-columns: 350px !important;
+  }
+}
+
+/* top menu */
+
+body>header {
+  /* useful when "position: fixed" is turned-on */
+  padding-top: 60px;
+}
+
+nav.container {
+  background-color: var(--background-color);
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+}
+
+nav :is(.menu-btn, .menu-icon) {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav .home-menu {
+  flex: 0 0 auto;
+}
+
+nav .main-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav .menu {
+  display: none;
+}
+
+@media (width < 48em) {
+  nav.container {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    & .menu-icon {
+      display: block;
+    }
+    & .home-menu, & .main-menu {
+      display: none;
+    }
+    & .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-height: 0;
+      transition: max-height 0.3s ease-out;
+      box-shadow: 0px 3px 8px;
+      margin: 10px 10px;
+      background-color: var(--pico-card-background-color);
+      & li {
+        width: 100%;
+      }
+      & a {
+        display: block;
+      }
+    }
+    & .menu-btn:checked ~ .menu {
+      max-height: 100vh;
+    }
   }
 }

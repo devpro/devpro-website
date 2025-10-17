@@ -48,22 +48,22 @@ maintenance:
     repoType: github
     description: Data synchronization tool, interesting for SQL to NoSQL migrations
     technologies: [.NET, MongoDB]
-  - title: HubSpot .NET
+  - title: HubSpot Client
     repoUrl: https://github.com/devpro/hubspot-dotnet
     repoType: github
     description: .NET Core wrappers for the HubSpot API
     technologies: [.NET]
-  - title: MongoDB Atlas .NET
+  - title: MongoDB Atlas CLI
     repoUrl: https://github.com/devpro/mongodb-atlas-dotnet-client
     repoType: github
     description: MongoDB Atlas API client, written in C#, to automate your Cloud infrastructure
     technologies: [.NET, MongoDB]
-  - title: ServiceNow .NET
+  - title: ServiceNow Client
     repoUrl: https://github.com/devpro/servicenow-dotnet-client
     repoType: github
     description: .NET components (API & libraries) to simplify the integration with ServiceNow, from any system (Linux, MacOS, Windows)
     technologies: [.NET]
-  - title: 2hire .NET
+  - title: 2hire Client
     repoUrl: https://github.com/devpro/2hire-dotnet-client
     repoType: github
     description: .NET Core wrappers for the HubSpot API
@@ -73,7 +73,7 @@ maintenance:
     repoType: github
     description: Small independant .NET libraries (Standard/Core) to do better with less code and capitalize on best practices
     technologies: [.NET]
-  - title: Yanport .NET
+  - title: Yanport Client
     repoUrl: https://github.com/devpro/yanport-dotnet-client
     repoType: github
     description: .NET client for Yanport, provider of real estate data
