@@ -25,6 +25,12 @@ a:has(> article):hover article {
   background-color: var(--pico-primary-hover-background);
 }
 
+/* home page */
+
+.welcome {
+  padding-bottom: 1rem;
+}
+
 /* youtube video */
 
 .video-container {
