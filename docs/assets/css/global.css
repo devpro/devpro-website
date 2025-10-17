@@ -63,7 +63,7 @@ article {
 /* home page */
 
 .welcome {
-  padding-bottom: 1rem;
+  padding: 1rem 0 1.5rem 0;
 }
 
 /* youtube video */
@@ -378,5 +378,77 @@ nav[aria-label="breadcrumb"] svg {
 @media (max-width: 768px) {
   .projects .grid {
     grid-template-columns: 350px !important;
+  }
+}
+
+/* top menu */
+
+body>header {
+  /* useful when "position: fixed" is turned-on */
+  padding-top: 60px;
+}
+
+nav.container {
+  background-color: var(--background-color);
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+}
+
+nav :is(.menu-btn, .menu-icon) {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav .home-menu {
+  flex: 0 0 auto;
+}
+
+nav .main-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav .menu {
+  display: none;
+}
+
+@media (width < 48em) {
+  nav.container {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    & .menu-icon {
+      display: block;
+    }
+    & .home-menu, & .main-menu {
+      display: none;
+    }
+    & .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-height: 0;
+      transition: max-height 0.3s ease-out;
+      box-shadow: 0px 3px 8px;
+      margin: 10px 10px;
+      background-color: var(--pico-card-background-color);
+      & li {
+        width: 100%;
+      }
+      & a {
+        display: block;
+      }
+    }
+    & .menu-btn:checked ~ .menu {
+      max-height: 100vh;
+    }
   }
 }
