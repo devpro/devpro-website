@@ -398,6 +398,7 @@ nav.container {
   justify-content: space-between;
   width: 100%;
   top: 0;
+  padding-left: 0;
 }
 
 nav :is(.menu-btn, .menu-icon) {
