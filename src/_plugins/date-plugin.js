@@ -8,4 +8,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
   });
+
+  eleventyConfig.addFilter("toIsoString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO();
+  });
 };

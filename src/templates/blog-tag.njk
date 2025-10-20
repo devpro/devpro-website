@@ -9,6 +9,7 @@ permalink: /tags/{{ tag | slugify }}/index.html
 section:
   title: "Blog"
   url: "/blog"
+excludeFromSitemap: true
 ---
 
 {%- set postsWithTag = collections[tag] %}

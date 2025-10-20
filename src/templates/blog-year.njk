@@ -9,6 +9,7 @@ permalink: /blog/{{ year }}/index.html
 section:
   title: "Blog"
   url: "/blog"
+excludeFromSitemap: true
 ---
 
 {%- set postsInYear = collections.posts | filterByYear(year) %}

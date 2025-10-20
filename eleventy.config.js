@@ -2,19 +2,18 @@ import { execSync } from 'child_process';
 import yaml from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
-import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import arrayPlugin from './src/_plugins/array-plugin.js';
 import blogPlugin from './src/_plugins/blog-plugin.js';
 import datePlugin from "./src/_plugins/date-plugin.js";
+import feedPlugin from "./src/_plugins/feed-plugin.js";
 import stringPlugin from "./src/_plugins/string-plugin.js";
 
-const markdownOptions = {
-  html: true,
-  breaks: false,
-  linkify: true
-};
-
 export default function (eleventyConfig) {
+  const markdownOptions = {
+    html: true,
+    breaks: false,
+    linkify: true
+  };
   let markdownParser = markdownIt(markdownOptions);
   // eleventyConfig.setLibrary('md', markdownParser);
 
@@ -35,27 +34,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(arrayPlugin);
   eleventyConfig.addPlugin(blogPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
+  eleventyConfig.addPlugin(feedPlugin);
   eleventyConfig.addPlugin(stringPlugin);
 
-  // creates RSS feed (see https://www.11ty.dev/docs/plugins/rss/)
-  eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom",
-		outputPath: "/feed.xml",
-		collection: {
-			name: "posts",
-			limit: 20,
-		},
-		metadata: {
-			language: "en",
-			title: "DevPro blog posts",
-			subtitle: "Bits of technology, practices, and everything that can make IT simple and accessible.",
-			base: "https://devpro.fr/",
-			author: {
-				name: "Bertrand Thomas",
-				email: "bertrand@devpro.fr"
-			}
-		}
-	});
+  eleventyConfig.addCollection('showInSitemap', collection => {
+    return collection.getFilteredByGlob('./src/**/*.{md,njk}');
+  });
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({
