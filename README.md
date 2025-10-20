@@ -5,17 +5,17 @@
 
 This repository contains the source code for [devpro.fr](https://devpro.fr).
 
-## 🚀 About
+## About
 
 This static website is built with [Eleventy](https://www.11ty.dev/), styled using [Pico CSS](https://picocss.com/), and hosted by GitHub Pages.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, ideas, and improvements are welcome!
 
 See the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn how to get started.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Huge thanks to:
 
@@ -27,7 +27,3 @@ Additional thanks to:
 - [Brent Arias](https://codepen.io/brentarias) for [CodePen Pico CSS Responsive Hamburger](https://codepen.io/brentarias/pen/gOQybod)
 - [Eleanor Holley](https://webbureaucrat.dev/) for [How to Use Excerpts in Eleventy](https://webbureaucrat.dev/articles/eleventy-excerpts/)
 - [Sébastien Lecacheur](https://slecache.com/) for [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/)
-
-## 🌐 Live Website
-
-➡️ [devpro.fr](https://devpro.fr)
