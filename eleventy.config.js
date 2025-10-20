@@ -2,6 +2,7 @@ import { execSync } from 'child_process';
 import yaml from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
+import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import arrayPlugin from './src/_plugins/array-plugin.js';
 import blogPlugin from './src/_plugins/blog-plugin.js';
 import datePlugin from "./src/_plugins/date-plugin.js";
@@ -35,6 +36,26 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(blogPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
   eleventyConfig.addPlugin(stringPlugin);
+
+  // creates RSS feed (see https://www.11ty.dev/docs/plugins/rss/)
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom",
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts",
+			limit: 20,
+		},
+		metadata: {
+			language: "en",
+			title: "DevPro blog posts",
+			subtitle: "Bits of technology, practices, and everything that can make IT simple and accessible.",
+			base: "https://devpro.fr/",
+			author: {
+				name: "Bertrand Thomas",
+				email: "bertrand@devpro.fr"
+			}
+		}
+	});
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({

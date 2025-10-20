@@ -11,6 +11,7 @@ The website is using:
     With the plugins:
 
     - [11ty/eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight)
+    - [11ty/eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
 
 2. [Pico CSS](https://picocss.com/) as CSS framework (web design)
 

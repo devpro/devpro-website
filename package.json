@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/devpro/devpro-website",
   "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@picocss/pico": "^2.1.1",
     "prismjs": "^1.30.0"
   },

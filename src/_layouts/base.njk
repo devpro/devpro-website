@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>{{ title }} | DevPro.fr</title>
+  <link rel="alternate" type="application/atom+xml" title="DevPro Feed" href="/feed.xml">
   <!-- <meta name="description" content="A pure HTML example, without dependencies."> -->
   <link rel="stylesheet" href="/css/pico.min.css">
   <link rel="stylesheet" href="/css/prism-tomorrow.css">
@@ -37,6 +38,15 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" class="outline" aria-label="Subscribe to Feed" href="/feed.xml" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4c10.5 0 19 8.5 19 19"></path>
+              <path d="M4 11c6.6 0 12 5.4 12 12"></path>
+              <circle cx="4" cy="20" r="2"></circle>
             </svg>
           </a>
         </li>
@@ -102,7 +112,7 @@
       <ul>
         <li><small><a href="/about" class="secondary">About</a></small></li>
         <li><small><a href="/news" class="secondary">News</a></small></li>
-        <li><small><a href="/legal-mentions" class="secondary">Legal mentions</a></small></li>
+        <li><small><a href="/legal-mentions" class="secondary" aria-label="Legal Mentions">Legal</a></small></li>
       </ul>
     </nav>
   </footer>
