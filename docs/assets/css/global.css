@@ -377,20 +377,18 @@ nav[aria-label="breadcrumb"] svg {
 
 @media (max-width: 768px) {
   .projects .grid {
-    grid-template-columns: 350px !important;
+    grid-template-columns: 330px !important;
   }
 }
 
 /* top menu */
 
 body>header {
-  /* useful when "position: fixed" is turned-on */
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 nav.container {
   background-color: var(--background-color);
-  position: fixed;
   z-index: 1;
   overflow: hidden;
   align-items: center;
