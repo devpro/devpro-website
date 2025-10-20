@@ -2,10 +2,10 @@ import { execSync } from 'child_process';
 import yaml from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
-import arrayPlugin from './docs/_plugins/array-plugin.js';
-import blogPlugin from './docs/_plugins/blog-plugin.js';
-import datePlugin from "./docs/_plugins/date-plugin.js";
-import stringPlugin from "./docs/_plugins/string-plugin.js";
+import arrayPlugin from './src/_plugins/array-plugin.js';
+import blogPlugin from './src/_plugins/blog-plugin.js';
+import datePlugin from "./src/_plugins/date-plugin.js";
+import stringPlugin from "./src/_plugins/string-plugin.js";
 
 const markdownOptions = {
   html: true,
@@ -25,8 +25,8 @@ export default function (eleventyConfig) {
     .addPassthroughCopy({
       'node_modules/@picocss/pico/css/pico.min.css': 'css/pico.min.css',
       'node_modules/prismjs/themes/prism-tomorrow.css': 'css/prism-tomorrow.css',
-      'docs/assets/css': 'css',
-      'docs/assets/scripts': 'scripts'
+      'src/assets/css': 'css',
+      'src/assets/scripts': 'scripts'
     });
 
   // adds filters and collections
@@ -48,7 +48,7 @@ export default function (eleventyConfig) {
 
   return {
     dir: {
-      input: 'docs',
+      input: 'src',
       includes: '_includes',
       layouts: '_layouts',
       output: '_site'

@@ -28,7 +28,7 @@ The website is using:
 
 ```txt
 <root>/
-├─ docs/
+├─ src/
 │  ├─ _data/
 │  │  ├─ <type>.js
 │  │  └─ <type>.json
