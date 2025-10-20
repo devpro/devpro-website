@@ -1,72 +1,78 @@
 - name: Auditing
-  description: Comprehensive audits to evaluate and optimize your team's workflows and infrastructure management.
+  description: Comprehensive, interview-based audits to evaluate and optimize digital system management within organizations.
   offeringListTitle: Assessment Scopes
   missions:
     - title: DevOps Maturity
-      description: Assess your DevOps practices to identify strengths and opportunities for improvement.
+      description: Evaluate DevOps practices to identify strengths, gaps, and opportunities for enhanced efficiency and collaboration.
       duration: 1-2 weeks
     - title: Organizational Effectiveness
-      description: Analyze team structures and processes to enhance productivity and collaboration.
+      description: Analyze team structures, workflows, and processes to boost productivity and foster seamless collaboration.
       duration: 1-2 weeks
-    - title: System Reliability and High Availability
-      description: Evaluate infrastructure to ensure robust, scalable, and highly available systems.
+    - title: Technical Stack
+      description: Understand risks (technical debt, vendor lock-in, security, reliability, high availability) and optimize maintenance costs.
       duration: 1-2 weeks
 - name: Coaching
-  description: Expert guidance to empower your teams with modern practices and technical excellence.
+  description: Expert guidance to empower teams with modern practices, fostering technical excellence and operational efficiency.
   offeringListTitle: Specialties
   missions:
     - title: Agile Methodologies
-      description: Implement Agile frameworks like Scrum and Kanban using tools such as Jira and Azure DevOps.
-      duration: Varies
-    - title: Quality Assurance
-      description: Enhance testing strategies with automated tools like Playwright and a balanced testing pyramid.
-      duration: Varies
+      description: Implement Agile frameworks (Scrum, Kanban) using tools like Jira and Azure DevOps for streamlined project management.
+      duration: 2-4 weeks
     - title: DevSecOps Transformations
-      description: Optimize workflows with value stream mapping, CI/CD pipelines, Git flows, and shift-left practices.
-      duration: Varies
+      description: Optimize workflows with value stream mapping, CI/CD pipelines, Git flows, and shift-left security practices.
+      duration: 4-8 weeks
+    - title: Quality Assurance
+      description: Strengthen testing strategies with automated tools like Playwright, ensuring a balanced testing pyramid.
+      duration: 2-4 weeks
     - title: Software Development
-      description: Adopt best practices like Test-Driven Development (TDD) and low-coupling architecture.
-      duration: Varies
+      description: Adopt best practices like Test-Driven Development (TDD) and low-coupling architecture for robust solutions.
+      duration: 4-8 weeks
     - title: Operational Excellence
-      description: Streamline operations with GitOps, Infrastructure as Code (IaC), and advanced observability.
-      duration: Varies
+      description: Streamline operations with GitOps, Infrastructure as Code (IaC), and advanced observability practices.
+      duration: 4-8 weeks
 - name: Consulting
-  description: Strategic expertise to modernize systems and streamline technical operations.
+  description: Strategic expertise to modernize systems, optimize operations, and align technology with business goals.
   offeringListTitle: Engagement Types
   missions:
     - title: Application Modernization
-      description: Transform legacy applications into scalable, modern solutions tailored to your needs.
-      duration: Varies
+      description: Transform legacy applications into scalable, cloud-ready solutions tailored to your business needs.
+      duration: 8-12 weeks
     - title: Automation
-      description: Automate CI/CD pipelines, infrastructure, testing, and observability for efficiency.
-      duration: Varies
+      description: Automate CI/CD pipelines, infrastructure, testing, and observability to drive efficiency and reliability.
+      duration: 4-8 weeks
     - title: Cloud Native Migration
-      description: Transition to Cloud Native architectures using containers, Kubernetes, Helm, and secure practices.
-      duration: Varies
+      description: Transition to cloud-native architectures using containers, Kubernetes, Helm, and secure DevOps practices.
+      duration: 8-12 weeks
     - title: Information System Architecture
-      description: Design robust, scalable architectures to support your business objectives.
-      duration: Varies
+      description: Design scalable, resilient architectures to support long-term business objectives and growth.
+      duration: 6-10 weeks
     - title: Technical Support
-      description: Provide expert support for backend (.NET), frontend (Angular), databases, Kubernetes and Cloud platforms.
-      duration: Varies
-- name: Technical Marketing
-  description: Compelling strategies to promote your company and drive sales of your solutions.
+      description: Provide expert support for backend (.NET), frontend (Angular), databases, Kubernetes, and cloud platforms.
+      duration: Ongoing or project-based
+- name: Sales Engineering
+  description: Strategic solutions to promote your products, engage customers, and drive sales growth.
   offeringListTitle: Upselling Actions
   missions:
-    - title: Hands-on Workshop Material
-      description: Develop interactive, high-impact workshop content for live or on-site events.
+    - title: Pre-Sales Closing
+      description: Deliver compelling technical demonstrations and proofs-of-concept to secure customer commitments.
       duration: Varies
-    - title: Technical Advocacy
-      description: Create engaging slides, webinars, and event materials to boost your brand's presence.
+    - title: Customer Engagement
+      description: Enhance customer relationships through product promotion, support, and feedback to engineering teams.
+      duration: Varies
+    - title: Partner Enablement
+      description: Equip partners with technical knowledge and tools to effectively sell and support your solutions.
+      duration: Varies
+    - title: Technical Marketing
+      description: Create engaging content and lead hands-on workshops, live events, and booth demonstrations.
       duration: Varies
 - name: Training
-  description: Best-in-class training content to streamline onboarding for your team and customers.
+  description: Tailored, high-quality training programs to empower internal teams and customers with essential skills.
   offeringListTitle: Content Types
   missions:
     - title: Custom-Made Programs
-      description: Deliver tailored training sessions to meet the specific needs of your team or customers.
+      description: Deliver bespoke, interactive training sessions tailored to your team's or customers specific needs.
       location: On-site or Remote
-      duration: Varies
+      duration: 1-4 weeks
     - title: Self-Paced Learning
-      description: Provide flexible, high-quality content for independent learning, tailored for teams and customers.
-      duration: Varies
+      description: Develop flexible, high-quality e-learning content for independent learning, customized for teams or customers.
+      duration: 2-6 weeks
