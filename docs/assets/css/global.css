@@ -384,13 +384,11 @@ nav[aria-label="breadcrumb"] svg {
 /* top menu */
 
 body>header {
-  /* useful when "position: fixed" is turned-on */
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 nav.container {
   background-color: var(--background-color);
-  position: fixed;
   z-index: 1;
   overflow: hidden;
   align-items: center;
