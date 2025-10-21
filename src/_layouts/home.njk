@@ -10,7 +10,7 @@ layout: base
   <div>
     <h2>Recent blog posts</h2>
     <div>
-      {%- for post in collections.posts | reverse | first(3) %}
+      {%- for post in collections.posts | reverse | first(5) %}
       <div>
         <div>
           <small><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>

@@ -4,6 +4,7 @@ export default {
   subtitle: "Bits of technology, practices, and everything that can make IT simple and accessible.",
   author: {
     name: "Bertrand Thomas",
-    email: "bertrand@devpro.fr"
+    email: "bertrand@devpro.fr",
+    image: "/images/profile-bertrand.jpg"
   }
 };

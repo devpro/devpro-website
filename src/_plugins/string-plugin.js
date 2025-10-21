@@ -11,4 +11,11 @@ export default function (eleventyConfig) {
     if (!str) return str;
     return str.replace(/-/g, " ");
   });
+
+  eleventyConfig.addFilter("trim", function (value) {
+    if (typeof value !== "string") {
+      return value;
+    }
+    return value.trim();
+  });
 };

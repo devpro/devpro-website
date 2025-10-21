@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <title>{{ title }} | DevPro.fr</title>
+  <meta name="description" content="{{ page.excerpt | trim or website.subtitle }}">
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ page.excerpt | trim or website.subtitle }}" />
+  <meta property="og:image" content="{{ website.baseUrl }}{{ image or website.author.image }}" />
+  <meta property="og:url" content="{{ website.baseUrl }}{{ page.url }}" />
+  <meta property="og:type" content="website" />
   <link rel="alternate" type="application/atom+xml" title="DevPro Feed" href="/feed.xml">
-  <!-- <meta name="description" content="A pure HTML example, without dependencies."> -->
   <link rel="stylesheet" href="/css/pico.min.css">
   <link rel="stylesheet" href="/css/prism-tomorrow.css">
   <link rel="stylesheet" href="/css/global.css">
