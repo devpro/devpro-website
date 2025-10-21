@@ -6,6 +6,6 @@ export default {
     name: "Bertrand Thomas",
     email: "bertrand@devpro.fr",
     profile: "/images/bertrand-lecres.jpg",
-    preview: "/images/bertrand-devopsdays23.jpg"
+    preview: "/images/devpro-header.jpg"
   }
 };
