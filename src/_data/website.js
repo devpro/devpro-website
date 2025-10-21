@@ -5,6 +5,7 @@ export default {
   author: {
     name: "Bertrand Thomas",
     email: "bertrand@devpro.fr",
-    image: "/images/profile-bertrand.jpg"
+    profile: "/images/bertrand-lecres.jpg",
+    preview: "/images/bertrand-devopsdays23.jpg"
   }
 };
