@@ -26,6 +26,7 @@ export default function (eleventyConfig) {
       'node_modules/@picocss/pico/css/pico.min.css': 'css/pico.min.css',
       'node_modules/prismjs/themes/prism-tomorrow.css': 'css/prism-tomorrow.css',
       'src/assets/css': 'css',
+      'src/assets/images': 'images',
       'src/assets/scripts': 'scripts'
     });
 
