@@ -3,7 +3,7 @@ title: "New DevPro website is live!"
 tags: [announcement]
 ---
 
-I'm thrilled to announce that the completely new version of devpro.fr is officially online!
+I'm thrilled to announce that the completely new version of devpro&#46;fr is officially online!
 It has been built with Eleventy and Pico CSS.
 
 <!-- more -->
