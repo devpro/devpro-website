@@ -3,78 +3,78 @@ on-going:
     repoUrl: https://github.com/devpro/tech-notes
     repoType: github
     website: https://tech.devpro.fr/
-    description: Notes about Information Technology
+    description: A curated website offering concise, practical notes on IT organizations, technologies, and best practices for self-paced learning.
   - title: Kube Workload Toolkit
     repoUrl: https://github.com/devpro/helm-charts
     repoType: github
     website: https://kwt.devpro.fr/
-    description: Custom Helm charts and clear documentation to ease Kubernetes workload deployment
+    description: A streamlined solution for deploying Kubernetes workloads, featuring custom Helm charts and clear, user-friendly documentation.
     technologies: [Kubernetes]
-  - title: Kubernetes Essentials
+  - title: Kube Essentials
     repoUrl: https://github.com/devpro/kubernetes-essentials
     repoType: github
-    description: Training material about Kubernetes
+    description: Comprehensive Kubernetes training materials for beginners and certification candidates, covering essentials to advanced concepts.
     technologies: [Docker, Kubernetes]
 active:
   - title: Keeptrack
     repoUrl: https://github.com/devpro/keeptrack
     repoType: github
-    description: Applications and libraries to save and review things we like & own, things we like & saw
+    description: A suite of applications and libraries to save, organize, and review items you own or love, from books to experiences.
     technologies: [Angular, .NET, MongoDB]
   - title: Infrastructure Setup
     repoUrl: https://github.com/devpro/infrastructure-provisioning
     repoType: github
-    description: Material to quickly setup any environment (particularly interesting for Instruqt tracks)
+    description: Tools and scripts to rapidly provision development environments, optimized for Instruqt tracks and beyond.
     technologies: [Linux]
   - title: Terraform MongoDB Backend
     repoUrl: https://github.com/devpro/terraform-backend-mongodb
     repoType: github
     website: https://devpro.github.io/terraform-backend-mongodb/
-    description: Terraform/OpenTofu HTTP backend to manage state in a MongoDB database
+    description: A Terraform/OpenTofu HTTP backend for managing infrastructure state in MongoDB, with robust documentation.
     technologies: [.NET, MongoDB, Terraform]
   - title: Sales Portal
     repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
     repoType: gitlab
-    description: Solution to manage Sales activity, created for educational purposes
+    description: An educational platform to manage and simulate sales activities, built for learning (micro-services, containers) and experimentation (observability, security).
     technologies: [.NET, MongoDB, Kubernetes]
 maintenance:
   - title: almops
     repoUrl: https://github.com/devpro/almops
     repoType: github
-    description: Command line tool to administrate ALM (Application lifecycle management) solutions such as Azure DevOps, GitHub, GitLab
+    description: A command-line tool for seamless administration of ALM platforms like Azure DevOps, GitHub, and GitLab.
     technologies: [.NET]
   - title: Cygnus
     repoUrl: https://github.com/devpro/cygnus
     repoType: github
-    description: Data synchronization tool, interesting for SQL to NoSQL migrations
+    description: A powerful tool for data synchronization, ideal for SQL-to-NoSQL migrations and data integration tasks.
     technologies: [.NET, MongoDB]
   - title: HubSpot Client
     repoUrl: https://github.com/devpro/hubspot-dotnet
     repoType: github
-    description: .NET Core wrappers for the HubSpot API
+    description: Lightweight .NET Core wrappers for seamless integration with the HubSpot API.
     technologies: [.NET]
   - title: MongoDB Atlas CLI
     repoUrl: https://github.com/devpro/mongodb-atlas-dotnet-client
     repoType: github
-    description: MongoDB Atlas API client, written in C#, to automate your Cloud infrastructure
+    description: A C# CLI for automating MongoDB Atlas cloud infrastructure management with ease.
     technologies: [.NET, MongoDB]
   - title: ServiceNow Client
     repoUrl: https://github.com/devpro/servicenow-dotnet-client
     repoType: github
-    description: .NET components (API & libraries) to simplify the integration with ServiceNow, from any system (Linux, MacOS, Windows)
+    description: .NET components for easy ServiceNow integration, created originally for infrastructure automation (CMDB).
     technologies: [.NET]
   - title: 2hire Client
     repoUrl: https://github.com/devpro/2hire-dotnet-client
     repoType: github
-    description: .NET Core wrappers for the HubSpot API
+    description: .NET Core wrappers for seamless integration with the 2hire API, simplifying mobility solutions.
     technologies: [.NET]
   - title: Withywoods
     repoUrl: https://github.com/devpro/withywoods
     repoType: github
-    description: Small independant .NET libraries (Standard/Core) to do better with less code and capitalize on best practices
+    description: A collection of lightweight .NET libraries to streamline coding with best practices and minimal effort.
     technologies: [.NET]
   - title: Yanport Client
     repoUrl: https://github.com/devpro/yanport-dotnet-client
     repoType: github
-    description: .NET client for Yanport, provider of real estate data
+    description: A .NET client for accessing Yanport's real estate data, enabling seamless data integration.
     technologies: [.NET]
