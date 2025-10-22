@@ -6,11 +6,11 @@ Bertrand Thomas, `bertrand(at)devpro.fr`, is the owner of the website devpro.fr.
 
 ## Hosting
 
-The website devpro.fr is hosted by GitHub Pages, `pages.github.com`:<br>
+The website devpro.fr is hosted by GitHub Pages (`pages.github.com`):<br>
 GitHub, Inc.<br>
 88 Colin P Kelly Jr St, San Francisco, CA 94107, United States
 
-The domain name devpro.fr is registered with OVH, `www.ovh.com`:<br>
+The domain name devpro.fr is registered with OVH (`www.ovh.com`):<br>
 2 rue Kellermann, 59100 Roubaix, France
 
 ## Intellectual Property
