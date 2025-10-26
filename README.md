@@ -28,3 +28,4 @@ Additional thanks to:
 - [Eleanor Holley](https://webbureaucrat.dev/) for [How to Use Excerpts in Eleventy](https://webbureaucrat.dev/articles/eleventy-excerpts/)
 - [Sébastien Lecacheur](https://slecache.com/) for [Adding Pagefind Search to a Static Eleventy Site](https://slecache.com/posts/adding-pagefind-search-to-a-static-eleventy-site/)
 - Joonatan Uusväli for [Getting an image url for meta tags when using eleventyImageTransformPlugin](https://github.com/11ty/eleventy-img/issues/278#issuecomment-2609486605)
+- [Martin Hähnel](https://blog.martin-haehnel.de/) for [How to add footnotes to Eleventy](https://blog.martin-haehnel.de/blog/2025/02/11/footnotes-in-eleventy/)
