@@ -74,7 +74,7 @@ Enterprises can turn to providers offering supported MinIO distributions:
 - [Docker Hardened Images](https://www.docker.com/products/hardened-images/) may provide it but I am awaiting access
 - IBM [Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may only work on OpenShift (I lack access and cannot test it)
 - [Minimus](https://www.minimus.io/get-started) seems to provide MinIO but I have not received a response to my request to get started
-- RapidFort doesn't display MinIO in the public list but has confirmed its availability in their catalog (with all image flavors)
+- RapidFort does not list MinIO in its public catalog but has confirmed its availability across all image flavors in their catalog
 
 ## Other Projects
 
