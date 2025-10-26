@@ -62,19 +62,18 @@ Image                                                                           
 
 ## Alternatives for Enterprises
 
-Enterprises can turn to providers offering supported MinIO distributions:
+Enterprises can rely on the following providers offering supported MinIO distributions:
 
 - [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview)
-- [RapidFort Curated Images](https://www.rapidfort.com/)
+- [RapidFort Curated Images](https://www.rapidfort.com/) [^2]
 - [SUSE Application Collection](https://apps.rancher.io/applications/minio)
 
-**Notes**:
+The following options were excluded from consideration due to insufficient information or lack of access:
 
-- Broadcom VMware [Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) doesn't show MinIO in their catalog
-- [Docker Hardened Images](https://www.docker.com/products/hardened-images/) may provide it but I am awaiting access
-- IBM [Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may only work on OpenShift (I lack access and cannot test it)
-- [Minimus](https://www.minimus.io/get-started) seems to provide MinIO but I have not received a response to my request to get started
-- RapidFort does not list MinIO in its public catalog but has confirmed its availability across all image flavors in their catalog
+- [Broadcom VMware Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) does not list MinIO in its catalog
+- [Docker Hardened Images](https://www.docker.com/products/hardened-images/) may offer it, but I am awaiting access
+- [IBM Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may be limited to OpenShift (I lack access and cannot test it)
+- [Minimus](https://www.minimus.io/get-started) appears to offer MinIO, but I have not received a response to my request to get started
 
 ## Other Projects
 
@@ -99,9 +98,17 @@ There is real value in paying for services from secured application providers.
 I'd be eager to hear your thoughts!
 Please feel free to [contact me](/contact).
 
+## Appendix - World map
+
+[Netlas](https://netlas.io/) created a search on CVE-2025-62506 [^3]:
+
+![Netlas report on CVE-2025-62506](images/netlas-minio-cve-20251026.jpg)
+
 ## References
 
 [^1]: [Tracxn - MinIO's Funding Rounds](https://tracxn.com/d/companies/minio/__Srk8fHV452zPtlVbyBjR7418hkgzEa_bU0LJUHGk8IU/funding-and-investors).
+[^2]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
+[^3]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).
 
 <!--
 alias trivy="docker run -it --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock:ro -v $HOME/.kube/config:/root/.kube/config aquasec/trivy:latest"
