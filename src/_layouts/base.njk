@@ -9,7 +9,7 @@
   <meta name="description" content="{{ page.excerpt | trim or website.subtitle }}" />
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ page.excerpt | trim or website.subtitle }}" />
-  <meta property="og:image" content="{{ website.baseUrl }}{{ image or website.author.preview }}" />
+  <meta property="og:image" content="{{ website.baseUrl }}{{ image | getTransformedUrl(page) or website.author.preview }}" />
   <meta property="og:url" content="{{ website.baseUrl }}{{ page.url }}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ website.siteName }}">
@@ -19,7 +19,7 @@
   <meta name="twitter:site" content="@devprofr">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ page.excerpt | trim or website.subtitle }}">
-  <meta name="twitter:image" content="{{ website.baseUrl }}{{ image or website.author.preview }}" />
+  <meta name="twitter:image" content="{{ website.baseUrl }}{{ image | getTransformedUrl(page) or website.author.preview }}" />
   <link rel="canonical" href="{{ website.baseUrl }}{{ page.url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ website.siteName }} Feed" href="/feed.xml">
   <link rel="stylesheet" href="/css/pico.min.css">
