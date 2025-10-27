@@ -1,5 +1,5 @@
 ---
-title: "Finding a container image for MinIO"
+title: "Choosing a MinIO container image"
 tags: [container, storage, security, open-source]
 image: images/dockerhub-minio-20251026.png
 ---
@@ -17,7 +17,7 @@ In this post, we'll explore what this shift means for individuals, communities, 
 ## About MinIO
 
 MinIO is a high-performance, distributed object storage system designed for unstructured data like photos, videos, logs, backups, and container/VM images.
-Released under the GNU AGPLv3 license, it's fully compatible with the Amazon S3 API, making it a drop-in replacement for AWS S3 in private clouds, Kubernetes clusters, or edge deployments.
+It's fully compatible with the Amazon S3 API, making it a drop-in replacement for AWS S3 in private clouds, Kubernetes clusters, or edge deployments.
 
 Founded in 2014 by Anand Babu Periasamy, Garima Kapoor, and Harshavardhana, [MinIO, Inc.](https://www.min.io/about) remains privately held, valued at $1B, with $126M in funding across three rounds [^1]:
 
@@ -25,7 +25,7 @@ Founded in 2014 by Anand Babu Periasamy, Garima Kapoor, and Harshavardhana, [Min
 - $20M Series A in 2017 (led by General Catalyst, Nexus Venture Partners, Dell Technologies Capital)
 - $103M Series B in 2022 (led by Intel Capital)
 
-The [open-source project](https://github.com/minio/minio), boasts over 58K GitHub stars and is utilized by key applications like GitLab (for object storage in Helm charts).
+The [open-source project](https://github.com/minio/minio), licensed under GNU AGPLv3, boasts over 58K GitHub stars and is utilized by key applications like GitLab (for object storage in Helm charts).
 
 ## Current Situation
 
@@ -42,11 +42,12 @@ This screenshot from Docker Hub (October 26, 2025) displays the two only options
 
 For pre-built images, community options include:
 
-Image                                                                                      | Provider                                  | Pros                                      | Cons
--------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------------
-[`cgr.dev/chainguard/minio`](https://images.chainguard.dev/directory/image/minio/versions) | [Chainguard](https://www.chainguard.dev/) | 🟢 0 CVE<br> 🟢 Small size (58 MB)        | 🔴 Only latest
-[`docker.io/elestio/minio`](https://hub.docker.com/r/elestio/minio)                        | [elestio](https://elest.io/)              | 🟢 Small size (60 MB)                     | 🔴 Only latest<br>🔴 1 HIGH CVE (CVE-2025-62506)
-[`docker.io/elasticio/minio`](https://hub.docker.com/r/elasticio/minio)                    | [elastic.io](https://www.elastic.io/)     | 🟢 Many versions<br>🟢 Small size (60 MB) | 🔴 1 HIGH CVE (CVE-2025-62506)
+Image                                                                                      | Provider                                      | Pros                                                                                          | Cons
+-------------------------------------------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------------------------|-------------------------------------------------
+[`cgr.dev/chainguard/minio`](https://images.chainguard.dev/directory/image/minio/versions) | [Chainguard](https://www.chainguard.dev/)     | 🟢 0 CVE<br>🟢 Small size (58 MB)                                                             | 🔴 Only latest
+[`docker.io/elestio/minio`](https://hub.docker.com/r/elestio/minio)                        | [elestio](https://elest.io/)                  | 🟢 Small size (60 MB)                                                                         | 🔴 Only latest<br>🔴 1 HIGH CVE (CVE-2025-62506)
+[`docker.io/elasticio/minio`](https://hub.docker.com/r/elasticio/minio)                    | [elastic.io](https://www.elastic.io/)         | 🟢 Many versions<br>🟢 Small size (60 MB)                                                     | 🔴 1 HIGH CVE (CVE-2025-62506)
+[`docker.io/alpine/minio`](https://hub.docker.com/r/alpine/minio)                          | [Bill Wang](https://github.com/alpine-docker) | 🟢 0 CVE<br>🟢 Small size (68 MB)<br>🟢 [Open-source](https://github.com/alpine-docker/minio) | 🔴 Very recent<br>🔴 One maintainer
 
 > **Why avoid `:latest` in Enterprises/Production?**  
 >
@@ -62,9 +63,10 @@ Image                                                                           
 
 ## Alternatives for Enterprises
 
-Enterprises can rely on the following providers offering supported MinIO distributions:
+Enterprises can rely on providers offering supported MinIO distributions:
 
 - [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview)
+- [MinIO AIStor](https://www.min.io/product/aistor)
 - [RapidFort Curated Images](https://www.rapidfort.com/) [^2]
 - [SUSE Application Collection](https://apps.rancher.io/applications/minio)
 
@@ -98,19 +100,29 @@ There is real value in paying for services from secured application providers.
 I'd be eager to hear your thoughts!
 Please feel free to [contact me](/contact).
 
-## Appendix - World map
+## Appendix: Global Map of CVE-2025-62506
 
-[Netlas](https://netlas.io/) created a search on CVE-2025-62506 [^3]:
+[Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^3]:
 
 ![Netlas report on CVE-2025-62506](images/netlas-minio-cve-20251026.jpg)
+
+## Appendix: Scanning images with Trivy
+
+I executed the following commands:
+
+```bash
+alias trivy="docker run -it --rm \
+  -v trivy-cache:/root/.cache/ \
+  -v /var/run/docker.sock:/var/run/docker.sock:ro \
+  -v $HOME/.kube/config:/root/.kube/config \
+  aquasec/trivy:latest"
+trivy image cgr.dev/chainguard/minio
+trivy docker.io/elestio/minio
+trivy image docker.io/elasticio/minio:25.43
+```
 
 ## References
 
 [^1]: [Tracxn - MinIO's Funding Rounds](https://tracxn.com/d/companies/minio/__Srk8fHV452zPtlVbyBjR7418hkgzEa_bU0LJUHGk8IU/funding-and-investors).
 [^2]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
 [^3]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).
-
-<!--
-alias trivy="docker run -it --rm -v trivy-cache:/root/.cache/ -v /var/run/docker.sock:/var/run/docker.sock:ro -v $HOME/.kube/config:/root/.kube/config aquasec/trivy:latest"
-trivy image docker.io/elasticio/minio:25.43
--->
