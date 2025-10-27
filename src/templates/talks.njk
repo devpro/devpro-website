@@ -5,12 +5,25 @@ permalink: /talks/index.html
 
 <!-- TODO: split english/french -->
 
-{%- for talk in talks | sortByDate | reverse %}
-<div>
-  <small><time datetime="{{ talk.date | htmlDateString }}">{{ talk.date | getYear }}</time></small> >
-  {{ talk.event }} >
-  <a href="/talk/{{ talk.slug or talk.title | slug }}">
-    {{ talk.title }}
-  </a>
+<div class="timeline">
+  {%- for talk in talks | sortByDate | reverse %}
+  <div class="timeline-item">
+    <div class="timeline-date">{{ talk.date | getYear }}</div>
+    <div class="timeline-content">
+      <h3>
+        <a href="/talk/{{ talk.slug or talk.title | slug }}">{{ talk.title }}</a>
+        {%- if talk.language != "en" %}
+        <span class="language-tag">{{ talk.language | upper }}</span>
+        {%- endif %}
+        {% if talk.slides %}
+        <span class="icon slides-icon" title="Slides available">📑</span>
+        {% endif %}
+        {% if talk.video %}
+        <span class="icon video-icon" title="Video available">🎥</span>
+        {% endif %}
+      </h3>
+      <p><strong>{{ talk.event }}</strong></p>
+    </div>
+  </div>
+  {%- endfor %}
 </div>
-{%- endfor %}
