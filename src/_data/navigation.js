@@ -11,6 +11,10 @@ export default {
     {
       title: 'Services',
       url: '/services/'
+    },
+    {
+      title: 'Talks',
+      url: '/talks/'
     }
   ]
 };

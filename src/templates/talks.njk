@@ -1,0 +1,16 @@
+---
+title: Talks
+permalink: /talks/index.html
+---
+
+<!-- TODO: split english/french -->
+
+{%- for talk in talks | sortByDate | reverse %}
+<div>
+  <small><time datetime="{{ talk.date | htmlDateString }}">{{ talk.date | getYear }}</time></small> >
+  {{ talk.event }} >
+  <a href="/talk/{{ talk.slug or talk.title | slug }}">
+    {{ talk.title }}
+  </a>
+</div>
+{%- endfor %}
