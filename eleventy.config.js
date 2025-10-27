@@ -13,7 +13,7 @@ import stringPlugin from './src/_plugins/string-plugin.js';
 export default function (eleventyConfig) {
   const markdownOptions = {
     html: true,
-    breaks: false,
+    breaks: true,
     linkify: true
   };
   let markdownParser = markdownIt(markdownOptions);

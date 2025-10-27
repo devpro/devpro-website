@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+<section class="about-grid">
+  <img src="images/bertrand-lecres.jpg" alt="Picture of Bertrand">
+  <p>
+    {{ introduction | toHtml | safe }}
+  </p>
+</section>
+
+{{ content | safe }}
