@@ -76,9 +76,9 @@ Enterprises can rely on providers offering supported MinIO distributions:
 
 The following options were excluded from consideration due to insufficient information or lack of access:
 
-- [Broadcom VMware Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) does not list MinIO in its catalog
+- [Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) does not list MinIO in its catalog
 - [Docker Hardened Images](https://www.docker.com/products/hardened-images/) may offer it, but I am awaiting access
-- [IBM Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may be limited to OpenShift (I lack access and cannot test it)
+- [Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may be limited to OpenShift (I lack access and cannot test it)
 - [Minimus](https://www.minimus.io/get-started) appears to offer MinIO, but I have not received a response to my request to get started
 
 ## Other Projects
