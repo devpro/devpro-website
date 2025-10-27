@@ -31,3 +31,7 @@ I'm fascinated by how technology can transform ideas into reality and streamline
 The revolutions of Agile, DevOps, CI/CD, containers, automated testing, Kubernetes, Cloud, and Cloud Native have been game-changers in my career.
 
 These paradigms have not only reshaped how I approach IT but also keep me endlessly curious and hooked on what's next.
+
+## Credits
+
+This website is built using [Eleventy](https://www.11ty.dev/) and [Pico CSS](https://picocss.com/), both licensed under the MIT License.

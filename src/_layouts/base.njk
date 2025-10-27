@@ -4,14 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>{{ title }} | DevPro.fr</title>
+  <title>{{ title }} | {{ website.siteName }}</title>
   <meta name="author" content="{{ author or website.author.name }}">
-  <meta name="title" property="og:title" content="{{ title }}" />
-  <meta name="description" property="og:description" content="{{ page.excerpt | trim or website.subtitle }}" />
-  <meta name="image" property="og:image" content="{{ website.baseUrl }}{{ image or website.author.preview }}" />
+  <meta name="description" content="{{ page.excerpt | trim or website.subtitle }}" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ page.excerpt | trim or website.subtitle }}" />
+  <meta property="og:image" content="{{ website.baseUrl }}{{ image | getTransformedUrl(page) or website.author.preview }}" />
   <meta property="og:url" content="{{ website.baseUrl }}{{ page.url }}" />
   <meta property="og:type" content="website" />
-  <link rel="alternate" type="application/atom+xml" title="DevPro Feed" href="/feed.xml">
+  <meta property="og:site_name" content="{{ website.siteName }}">
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@devprofr">
+  <meta name="twitter:site" content="@devprofr">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ page.excerpt | trim or website.subtitle }}">
+  <meta name="twitter:image" content="{{ website.baseUrl }}{{ image | getTransformedUrl(page) or website.author.preview }}" />
+  <link rel="canonical" href="{{ website.baseUrl }}{{ page.url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ website.siteName }} Feed" href="/feed.xml">
   <link rel="stylesheet" href="/css/pico.min.css">
   <link rel="stylesheet" href="/css/prism-tomorrow.css">
   <link rel="stylesheet" href="/css/global.css">
@@ -22,12 +32,12 @@
   <header class="container">
     <nav class="container">
       <ul class="home-menu">
-        <li class="item"><a href="/" class="secondary"><strong>DevPro</strong></a></li>
+        <li class="item"><a href="/" class="secondary"><strong>{{ website.siteName }}</strong></a></li>
       </ul>
       <ul class="main-menu">
-        {% for item in navigation.top %}
+        {%- for item in navigation.top %}
         <li class="item"><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-        {% endfor %}
+        {%- endfor %}
       </ul>
       <ul class="icons">
         <li>
@@ -75,15 +85,15 @@
         </svg>
       </label>
       <ul class="menu">
-        <li class="item"><a href="/" class="secondary"><strong>DevPro</strong></a></li>
-        {% for item in navigation.top %}
+        <li class="item"><a href="/" class="secondary"><strong>{{ website.siteName }}</strong></a></li>
+        {%- for item in navigation.top %}
         <li class="item"><a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-        {% endfor %}
+        {%- endfor %}
       </ul>
     </nav>
   </header>
   <main class="container">
-    {% if page.url != "/" %}
+    {%- if page.url != "/" %}
     <nav aria-label="breadcrumb">
       <ol>
         <li>
@@ -101,18 +111,18 @@
         <li>{{ title }}</li>
       </ol>
     </nav>
-    {% endif %}
+    {%- endif %}
     <div{% if includeInSearch %} data-pagefind-body{% endif %}>
-      {% if page.url != "/" %}
+      {%- if page.url != "/" %}
       <h1>{{ title }}</h1>
-      {% endif %}
+      {%- endif %}
       {{ content | safe }}
     </div>
   </main>
   <footer class="container">
     <nav>
       <ul>
-        <li><small>&copy; 2025 DevPro.fr</small></li>
+        <li><small>&copy; 2025 {{ website.author.name }}</small></li>
       </ul>
       <ul>
         <li><small><a href="/about" class="secondary">About</a></small></li>

@@ -12,6 +12,7 @@ The website is using:
 
     - [11ty/eleventy-plugin-syntaxhighlight](https://github.com/11ty/eleventy-plugin-syntaxhighlight)
     - [11ty/eleventy-plugin-rss](https://github.com/11ty/eleventy-plugin-rss)
+    - [@11ty/eleventy-img](https://github.com/11ty/eleventy-img)
 
 2. [Pico CSS](https://picocss.com/) as CSS framework (web design)
 
@@ -23,42 +24,46 @@ The website is using:
 
 6. [markdown-it](https://github.com/markdown-it/markdown-it) as Markdown parser (already used by Eleventy but needed for additional filters)
 
+    With the plugins:
+
+    - [markdown-it/markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
+
 7. [js-yaml](https://github.com/nodeca/js-yaml) as YAML data loader (js/json by default with Eleventy global data)
 
 ### File organization
 
 ```txt
 <root>/
-├─ src/
-│  ├─ _data/
-│  │  ├─ <type>.js
-│  │  └─ <type>.json
-│  │  └─ <type>.yaml
-│  ├─ _include/
-│  │  └─ <part>.json
-│  ├─ _layouts/
-│  │  └─ <part>.njk
-│  ├─ _plugins/
-│  │  └─ <type>-plugin.js
-│  ├─ assets/
-│  │  └─ css/
-│  │     └─ global.css
-│  │  └─ scripts/
-│  │     └─ <component>.js
-│  ├─ news/
-│  │  ├─ <news>.md
-│  │  └─ news.json
-│  ├─ pages/
-│  │  ├─ <page>.md
-│  │  └─ pages.json
-│  ├─ posts/
-│  │  ├─ YYYY-MM-DD-xxx.md
-│  │  └─ posts.json
-│  ├─ templates/
-│  │  ├─ <template>.njk
-│  │  └─ templates.json
-│  └─ index.md                  → home page
-└─ eleventy.config.js           → main file for Eleventy
+├── src/
+│   ├── _data/
+│   │   ├── <type>.js
+│   │   ├── <type>.json
+│   │   └── <type>.yaml
+│   ├── _include/
+│   │   └── <part>.json
+│   ├── _layouts/
+│   │   └── <part>.njk
+│   ├── _plugins/
+│   │   └── <type>-plugin.js
+│   ├── assets/
+│   │   └── css/
+│   │       └── global.css
+│   │   └── scripts/
+│   │       └── <component>.js
+│   ├── news/
+│   │   ├── <news>.md
+│   │   └── news.json
+│   ├── pages/
+│   │   ├── <page>.md
+│   │   └── pages.json
+│   ├── posts/
+│   │   ├── YYYY-MM-DD-xxx.md
+│   │   └── posts.json
+│   ├── templates/
+│   │   ├── <template>.njk
+│   │   └── templates.json
+│   └── index.md                  → home page
+└── eleventy.config.js            → main file for Eleventy
 ```
 
 ## Local run

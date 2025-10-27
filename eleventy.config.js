@@ -2,11 +2,13 @@ import { execSync } from 'child_process';
 import yaml from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
+import footnote_plugin from 'markdown-it-footnote';
 import arrayPlugin from './src/_plugins/array-plugin.js';
 import blogPlugin from './src/_plugins/blog-plugin.js';
-import datePlugin from "./src/_plugins/date-plugin.js";
-import feedPlugin from "./src/_plugins/feed-plugin.js";
-import stringPlugin from "./src/_plugins/string-plugin.js";
+import datePlugin from './src/_plugins/date-plugin.js';
+import feedPlugin from './src/_plugins/feed-plugin.js';
+import imagePlugin from './src/_plugins/image-plugin.js';
+import stringPlugin from './src/_plugins/string-plugin.js';
 
 export default function (eleventyConfig) {
   const markdownOptions = {
@@ -31,11 +33,13 @@ export default function (eleventyConfig) {
     });
 
   // adds filters and collections
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnote_plugin));
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(arrayPlugin);
   eleventyConfig.addPlugin(blogPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
   eleventyConfig.addPlugin(feedPlugin);
+  eleventyConfig.addPlugin(imagePlugin);
   eleventyConfig.addPlugin(stringPlugin);
 
   eleventyConfig.addCollection('showInSitemap', collection => {
