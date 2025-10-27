@@ -6,18 +6,19 @@ permalink: /talks/index.html
 <!-- TODO: split english/french -->
 
 <div class="timeline">
+  {% set prevYear = null %}
   {%- for talk in talks | sortByDate | reverse %}
+  {% set currentYear = talk.date | getYear %}
   <div class="timeline-item">
-    <div class="timeline-date">{{ talk.date | getYear }}</div>
+    <div class="timeline-date">
+      {% if loop.first or currentYear != prevYear %}{{ currentYear }}{% endif %}
+    </div>
     <div class="timeline-content">
       <h3>
         <a href="/talk/{{ talk.slug or talk.title | slug }}">{{ talk.title }}</a>
         {%- if talk.language != "en" %}
         <span class="language-tag">{{ talk.language | upper }}</span>
         {%- endif %}
-        {% if talk.slides %}
-        <span class="icon slides-icon" title="Slides available">📑</span>
-        {% endif %}
         {% if talk.video %}
         <span class="icon video-icon" title="Video available">🎥</span>
         {% endif %}
@@ -25,5 +26,6 @@ permalink: /talks/index.html
       <p><strong>{{ talk.event }}</strong></p>
     </div>
   </div>
+  {% set prevYear = currentYear %}
   {%- endfor %}
 </div>
