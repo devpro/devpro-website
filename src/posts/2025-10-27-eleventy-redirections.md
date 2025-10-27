@@ -36,6 +36,8 @@ An efficient way to manage redirects is to create a global data file named `src/
 
 Create a new file named `src/templates/redirect.njk`:
 
+{% raw %}
+
 ```njk
 ---
 pagination:
@@ -68,6 +70,8 @@ excludeFromSitemap: true
 
 </html>
 ```
+
+{% endraw %}
 
 This template uses a meta refresh tag for automatic redirects, a canonical link for SEO, and a JavaScript fallback.
 The eleventyExcludeFromCollections and excludeFromSitemap settings prevent the redirect pages from appearing in navigation or sitemaps.
