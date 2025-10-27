@@ -1,5 +1,5 @@
 ---
-title: "Choosing a MinIO container image"
+title: "MinIO container images gone? Best alternatives (2025)"
 tags: [container, storage, security, open-source]
 image: images/dockerhub-minio-20251026.png
 ---
@@ -8,26 +8,28 @@ MinIO, a popular open-source object storage solution, has shifted its community 
 
 <!-- more -->
 
-This change, first mentioned in [GitHub issue #21647](https://github.com/minio/minio/issues/21647#issuecomment-3418675115), means no more pre-built Docker images or binaries from official repositories, impacting users relying on automated updates.
-
-The decision coincided with a critical security release (`RELEASE.2025-10-15T17-29-55Z`) fixing **CVE-2025-62506** (CVSS 8.1: Privilege escalation via session policy bypass), leaving legacy images vulnerable.
-
-In this post, we'll explore what this shift means for individuals, communities, and enterprises running MinIO in containers and where to go next.
+In this post, we'll explore what is the impact for individuals, communities, and enterprises running MinIO in containers and where to go next.
 
 ## About MinIO
 
 MinIO is a high-performance, distributed object storage system designed for unstructured data like photos, videos, logs, backups, and container/VM images.
 It's fully compatible with the Amazon S3 API, making it a drop-in replacement for AWS S3 in private clouds, Kubernetes clusters, or edge deployments.
 
-Founded in 2014 by Anand Babu Periasamy, Garima Kapoor, and Harshavardhana, [MinIO, Inc.](https://www.min.io/about) remains privately held, valued at $1B, with $126M in funding across three rounds [^1]:
-
-- $3M seed in 2015 (led by AME Cloud Ventures)
-- $20M Series A in 2017 (led by General Catalyst, Nexus Venture Partners, Dell Technologies Capital)
-- $103M Series B in 2022 (led by Intel Capital)
+> Founded in 2014 by Anand Babu Periasamy, Garima Kapoor, and Harshavardhana, [MinIO, Inc.](https://www.min.io/about) remains privately held, valued at $1B, with $126M in funding across three rounds [^1]:
+>
+> - $3M seed in 2015 (led by AME Cloud Ventures)
+> - $20M Series A in 2017 (led by General Catalyst, Nexus Venture Partners, Dell Technologies Capital)
+> - $103M Series B in 2022 (led by Intel Capital)
 
 The [open-source project](https://github.com/minio/minio), licensed under GNU AGPLv3, boasts over 58K GitHub stars and is utilized by key applications like GitLab (for object storage in Helm charts).
 
-## Current Situation
+## Recent change
+
+MinIO's decision, first mentioned in [GitHub issue #21647](https://github.com/minio/minio/issues/21647#issuecomment-3418675115), means no more pre-built Docker images or binaries from official repositories, impacting users relying on automated updates.
+
+The announcement coincided with a critical security release (`RELEASE.2025-10-15T17-29-55Z`) fixing **CVE-2025-62506** (CVSS 8.1: Privilege escalation via session policy bypass), leaving legacy images vulnerable.
+
+## The challenge
 
 The latest official MinIO image is outdated, harboring CVE-2025-62506, where restricted accounts can spawn unrestricted ones, risking unauthorized data access. Customers get binaries through AIStor, but the community must build manually.
 
@@ -37,6 +39,8 @@ This screenshot from Docker Hub (October 26, 2025) displays the two only options
 
 - The previously-official `minio/minio` image (over 1 billion pulls), with the last push made approximately two months ago
 - The now-deleted `bitnami/minio` alternative (50M+ pulls)
+
+Both options are now gone.
 
 ## Available distributions for the community
 
@@ -111,14 +115,18 @@ Please feel free to [contact me](/contact).
 I executed the following commands:
 
 ```bash
+# defines an alias to use the container image of Trivy
 alias trivy="docker run -it --rm \
   -v trivy-cache:/root/.cache/ \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
   -v $HOME/.kube/config:/root/.kube/config \
   aquasec/trivy:latest"
+
+# scans all images
 trivy image cgr.dev/chainguard/minio
 trivy docker.io/elestio/minio
 trivy image docker.io/elasticio/minio:25.43
+trivy image alpine/minio:latest-release
 ```
 
 ## References
