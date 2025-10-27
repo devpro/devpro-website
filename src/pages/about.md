@@ -6,7 +6,7 @@ introduction: |
 
   My career has been a dynamic journey - from a software engineer working on critical systems to leading teams as a **technical lead** and manager, sharing knowledge as a **trainer** and speaker, and designing innovative systems as an **architect**.
 
-  I live in France, I speak English and French. You can find me on LinkedIn [berthomas](https://www.linkedin.com/in/berthomas/) and YouTube [@devprofr](https://www.youtube.com/@devprofr).
+  I create content in English and French. You can find me on GitHub: [devpro](https://github.com/devpro), LinkedIn: [berthomas](https://www.linkedin.com/in/berthomas/), and YouTube: [@devprofr](https://www.youtube.com/@devprofr).
 ---
 
 ## My passion
