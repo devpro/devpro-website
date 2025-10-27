@@ -69,9 +69,9 @@ Image                                                                           
 
 Enterprises can rely on providers offering supported MinIO distributions:
 
-- [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview)
+- [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview) [^2]
 - [MinIO AIStor](https://www.min.io/product/aistor)
-- [RapidFort Curated Images](https://www.rapidfort.com/) [^2]
+- [RapidFort Curated Images](https://www.rapidfort.com/) [^3]
 - [SUSE Application Collection](https://apps.rancher.io/applications/minio)
 
 The following options were excluded from consideration due to insufficient information or lack of access:
@@ -106,7 +106,7 @@ Please feel free to [contact me](/contact).
 
 ## Appendix: Global Map of CVE-2025-62506
 
-[Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^3]:
+[Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^4]:
 
 ![Netlas report on CVE-2025-62506](images/netlas-minio-cve-20251026.jpg)
 
@@ -132,5 +132,6 @@ trivy image alpine/minio:latest-release
 ## References
 
 [^1]: [Tracxn - MinIO's Funding Rounds](https://tracxn.com/d/companies/minio/__Srk8fHV452zPtlVbyBjR7418hkgzEa_bU0LJUHGk8IU/funding-and-investors).
-[^2]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
-[^3]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).
+[^2]: Chainguard published a post on the same topic just a few hours after my post: [Secure and Free MinIO Chainguard Containers](https://www.chainguard.dev/unchained/secure-and-free-minio-chainguard-containers)
+[^3]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
+[^4]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).
