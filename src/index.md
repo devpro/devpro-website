@@ -9,4 +9,4 @@ Hi, I'm Bertrand Thomas, a Solution Architect with 20+ years in IT, passionate a
 
 You'll find in this website **blog** posts, **projects** I'm working on, and **services** I provide to organizations.
 
-Want to connect? Check out my [contact page](/contact) to start a conversation!
+Want to know more? Check out the [About](/about) and [Contact](/contact) pages.

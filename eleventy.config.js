@@ -13,7 +13,7 @@ import stringPlugin from './src/_plugins/string-plugin.js';
 export default function (eleventyConfig) {
   const markdownOptions = {
     html: true,
-    breaks: false,
+    breaks: true,
     linkify: true
   };
   let markdownParser = markdownIt(markdownOptions);
@@ -42,8 +42,17 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(imagePlugin);
   eleventyConfig.addPlugin(stringPlugin);
 
-  eleventyConfig.addCollection('showInSitemap', collection => {
-    return collection.getFilteredByGlob('./src/**/*.{md,njk}');
+  eleventyConfig.addCollection('sitemap', collection => {
+    const pages = collection.getAll().filter((item) => {
+      return item.url &&
+        !item.data.excludeFromSitemap;
+    });
+    // notPaginated.forEach(p => {
+    //   if (p.url) {
+    //     console.log(`  URL: ${p.url} | Template: ${p.inputPath.split('/').pop()} |  ${p.data?.pagination}`);
+    //   }
+    // });
+    return pages;
   });
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)

@@ -69,16 +69,16 @@ Image                                                                           
 
 Enterprises can rely on providers offering supported MinIO distributions:
 
-- [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview)
+- [Chainguard Containers](https://images.chainguard.dev/directory/image/minio/overview) [^2]
 - [MinIO AIStor](https://www.min.io/product/aistor)
-- [RapidFort Curated Images](https://www.rapidfort.com/) [^2]
+- [RapidFort Curated Images](https://www.rapidfort.com/) [^3]
 - [SUSE Application Collection](https://apps.rancher.io/applications/minio)
 
 The following options were excluded from consideration due to insufficient information or lack of access:
 
-- [Broadcom VMware Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) does not list MinIO in its catalog
+- [Bitnami Secure Images](https://app-catalog.vmware.com/bitnami/apps) does not list MinIO in its catalog
 - [Docker Hardened Images](https://www.docker.com/products/hardened-images/) may offer it, but I am awaiting access
-- [IBM Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may be limited to OpenShift (I lack access and cannot test it)
+- [Red Hat Ecosystem Catalog](https://catalog.redhat.com/en/software/container-stacks/detail/60945b58d3f6d18cdbac26fe) may be limited to OpenShift (I lack access and cannot test it)
 - [Minimus](https://www.minimus.io/get-started) appears to offer MinIO, but I have not received a response to my request to get started
 
 ## Other Projects
@@ -92,21 +92,31 @@ Based on S3 compatibility, you may consider:
 
 ## Conclusion
 
-The next steps depend heavily on the context:
+The decision depend heavily on the context:
 
 - For **community** or **non-production** use, Chainguard offers the easiest security solution, but it should not be used in production due to the complexity of managing an environment with the `:latest` version. Building your own image is also an option.
-- For **enterprises** or **production** environments, consider enterprise offerings, which may provide additional valuable features, such as RapidFort's container hardening.
+- For **enterprises** or **production** environments, consider enterprise offerings, which may provide additional valuable features, such as vulnerability review, certifications, compliance, container hardening and Helm Charts.
 - For **architects**, consider replacing MinIO with an alternative component, reinforcing the importance of avoiding vendor lock-in when designing systems.
 
 This may also present an interesting opportunity to evaluate how your organization manages its supply chain, assesses its container security posture, and addresses the risks of relying directly on open-source artifacts.
 There is real value in paying for services from secured application providers.
 
-I'd be eager to hear your thoughts!
-Please feel free to [contact me](/contact).
+<section class="expert-cta">
+  <p class="cta-header">
+    <strong>Uncertain about next steps?</strong>
+  </p>
+  <p class="cta-content">
+    I help organizations deliver and operate Cloud Native environments - secured, highly available, vendor-free.
+  </p>
+  <p class="cta-action">
+    <a href="/contact/" class="cta-btn">Let's talk solutions →</a>
+    <span class="free-call-badge">Free 15-min call</span>
+  </p>
+</section>
 
 ## Appendix: Global Map of CVE-2025-62506
 
-[Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^3]:
+[Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^4]:
 
 ![Netlas report on CVE-2025-62506](images/netlas-minio-cve-20251026.jpg)
 
@@ -132,5 +142,6 @@ trivy image alpine/minio:latest-release
 ## References
 
 [^1]: [Tracxn - MinIO's Funding Rounds](https://tracxn.com/d/companies/minio/__Srk8fHV452zPtlVbyBjR7418hkgzEa_bU0LJUHGk8IU/funding-and-investors).
-[^2]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
-[^3]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).
+[^2]: Chainguard published a post on the same topic just a few hours after my post: [Secure and Free MinIO Chainguard Containers](https://www.chainguard.dev/unchained/secure-and-free-minio-chainguard-containers)
+[^3]: RapidFort confirmed MinIO availability across all image flavors, even if not listed on their website.
+[^4]: [Netlas - Post about CVE-2025-62506](https://x.com/Netlas_io/status/1980236823491137733).

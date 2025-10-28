@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>{{ title }} | {{ website.siteName }}</title>
+  <title>{{ website.siteName }}{% if title != "Home" %} {{ title }}{% endif %}</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta name="author" content="{{ author or website.author.name }}">
   <meta name="description" content="{{ page.excerpt | trim or website.subtitle }}" />

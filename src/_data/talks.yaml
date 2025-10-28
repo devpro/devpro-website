@@ -1,0 +1,82 @@
+- title: ALM with Azure DevOps
+  date: 2021-04-15
+  event: Enova Webinar
+  slides: https://public.devpro.fr/slides/Enova_Webinar_20210415_ALM_Azure_DevOps.pdf
+  slideType: pdf
+  language: en
+  slug: enova-webinar-alm-with-azure-devops
+- title: SOA and Cloud uprising
+  date: 2019-05-09
+  event: Pivotal interview
+  slides: https://public.devpro.fr/slides/SOA_And_Cloud_Uprising_May09.pdf
+  slideType: pdf
+  language: en
+  slug: pivotal-interview-soa-and-cloud-uprising
+- title: DevOps REX 2016
+  date: 2016-11-28
+  event: Arkadin Webinar
+  slides: https://public.devpro.fr/slides/Arkadin_DevOps_REX_2016.pdf
+  slideType: pdf
+  language: en
+  slug: arkadin-webinar-devops-rex-2016
+- title: Sécurité des conteneurs
+  date: 2024-02-08
+  event: DevOps Genève Meetup
+  slides: https://presentations.devpro.fr/meetup-secu-conteneur-202402/
+  language: fr
+  slug: devops-geneve-meetup-securite-conteneurs
+- title: Comprendre l'approche CI/CD
+  date: 2023-07-18
+  event: SUSE Tech Live
+  slides: https://public.devpro.fr/slides/SUSE_LinkedIn_Event_CI_CD_Juillet_2023.pdf
+  slideType: pdf
+  video: https://www.youtube.com/watch?v=vPGUpvVwTCM
+  embedVideo: https://www.youtube.com/embed/vPGUpvVwTCM?si=0ubYHehCqiwCCHzI
+  language: fr
+  slug: suse-tech-live-comprendre-approche-ci-cd
+- title: Transformation numérique et DevOps à l'heure des conteneurs
+  date: 2023-04-24
+  event: DevOpsDays Geneva 2023
+  slides: https://public.devpro.fr/slides/devopsdays_geneva_2023_bertrand_thomas.pdf
+  slideType: pdf
+  language: fr
+  slug: devopsdays-geneva-2023-transformation-numerique
+- title: "Infrastructure-as-Code : quand et comment le mettre en place"
+  date: 2023-05-05
+  event: Promyze webinar
+  slides: https://public.devpro.fr/slides/Promyze_Webinars_Infrastructure_as_Code_2023.pdf
+  slideType: pdf
+  video: https://www.youtube.com/watch?v=jMaqYsjI2Q4
+  embedVideo: https://www.youtube.com/embed/jMaqYsjI2Q4?si=PlNItg7arupFxaqL
+  language: fr
+  slug: promyze-webinar-infrastructure-as-code
+- title: Comprendre le Cloud Native
+  date: 2023-04-18
+  event: SUSE Tech Live
+  slides: https://public.devpro.fr/slides/SUSE_LinkedIn_Event_Cloud_Native_April_2023.pdf
+  slideType: pdf
+  video: https://www.youtube.com/watch?v=-B8AKdyTB7g
+  embedVideo: https://www.youtube.com/embed/-B8AKdyTB7g?si=SRyLYkSbLgBO1yjU
+  language: fr
+  slug: suse-tech-live-cloud-native
+- title: Comment devenir un champion du NoSQL avec MongoDB
+  date: 2021-10-28
+  event: Klanik Webinar
+  slides: https://public.devpro.fr/slides/Klanik_20211028_Webinar_MongoDB.pdf
+  slideType: pdf
+  language: fr
+  slug: klanik-webinar-nosql-mongodb
+- title: Présentation de MongoDB
+  date: 2018-11-20
+  event: MongoDB Montpellier Meetup
+  slides: https://public.devpro.fr/slides/Presentation_Sopra_MongoDB_201811.pdf
+  slideType: pdf
+  language: fr
+  slug: mongodb-montpellier-meetup-presentation-mongodb
+- title: Retour d'expérience DevOps
+  date: 2017-10-24
+  event: TRSb Meetup
+  slides: https://public.devpro.fr/slides/TRSb_Meetup_DevOps_20171024.pdf
+  slideType: pdf
+  language: fr
+  slug: trsb-meetup-retour-experience-devops

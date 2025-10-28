@@ -1,0 +1,30 @@
+---
+pagination:
+  data: redirections
+  size: 1
+  alias: redirect
+permalink: /{{ redirect.origin | slugify }}/
+eleventyComputed:
+  newLocation: "{{ website.baseUrl }}{{ redirect.destination }}"
+layout: ""
+eleventyExcludeFromCollections: true
+excludeFromSitemap: true
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url={{ newLocation }}">
+  <title>Redirecting...</title>
+  <link rel="canonical" href="{{ newLocation }}">
+  <script>
+    window.location.replace("{{ newLocation }}");
+  </script>
+</head>
+
+<body>
+  <p>This page has moved to <a href="{{ newLocation }}">a new location</a>.</p>
+</body>
+
+</html>

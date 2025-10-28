@@ -1,10 +1,13 @@
 ---
+layout: about
 title: About
+introduction: |
+  Hello! I'm **Bertrand Thomas**, a **Solution Architect** with over 20 years of experience in the ever-evolving world of IT.
+
+  My career has been a dynamic journey - from a software engineer working on critical systems to leading teams as a **technical lead** and manager, sharing knowledge as a **trainer** and speaker, and designing innovative systems as an **architect**.
+
+  I create content in English and French. You can find me on GitHub: [devpro](https://github.com/devpro), LinkedIn: [berthomas](https://www.linkedin.com/in/berthomas/), and YouTube: [@devprofr](https://www.youtube.com/@devprofr).
 ---
-
-Hello! I'm **Bertrand Thomas**, a **Solution Architect** with over 20 years of experience in the ever-evolving world of IT.
-
-My career has been a dynamic journey - from a software engineer working on critical systems to leading teams as a **technical lead** and manager, sharing knowledge as a **trainer** and speaker, and designing innovative systems as an **architect**.
 
 ## My passion
 

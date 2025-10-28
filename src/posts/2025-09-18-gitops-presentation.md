@@ -33,12 +33,12 @@ Below are the recordings of the live streams where I discussed GitOps in detail:
 
 - English version:
 
-<div class="video-container">
+<div class="frame-container">
   <iframe src="https://www.youtube.com/embed/BfdTpVVa2QI?si=p_twzOL3B90XEcWX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 - French version:
 
-<div class="video-container">
+<div class="frame-container">
   <iframe src="https://www.youtube.com/embed/zDYP3JMgNuU?si=gCiXDl6KPZQzjT87" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>

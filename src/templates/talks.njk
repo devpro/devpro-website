@@ -1,0 +1,29 @@
+---
+title: Talks
+permalink: /talks/index.html
+---
+
+<div class="timeline">
+  {% set prevYear = null %}
+  {%- for talk in talks | sortByDate | reverse %}
+  {% set currentYear = talk.date | getYear %}
+  <div class="timeline-item">
+    <div class="timeline-date">
+      {% if loop.first or currentYear != prevYear %}{{ currentYear }}{% endif %}
+    </div>
+    <div class="timeline-content">
+      <h3>
+        <a href="/talk/{{ talk.slug or talk.title | slug }}">{{ talk.title }}</a>
+        {%- if talk.language != "en" %}
+        <span class="language-tag">{{ talk.language | upper }}</span>
+        {%- endif %}
+        {% if talk.embedVideo %}
+        <span class="icon video-icon" title="Video available">🎥</span>
+        {% endif %}
+      </h3>
+      <p><strong>{{ talk.event }}</strong></p>
+    </div>
+  </div>
+  {% set prevYear = currentYear %}
+  {%- endfor %}
+</div>

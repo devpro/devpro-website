@@ -1,0 +1,30 @@
+---
+pagination:
+  data: talks
+  size: 1
+  alias: talk
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "{{ talk.title | safe }}"
+permalink: /talk/{{ talk.slug or talk.title | slugify }}/
+section:
+  title: "Talks"
+  url: "/talks"
+---
+<p><b>{{ talk.event }}</b> - <time datetime="{{ talk.date | htmlDateString }}">{{ talk.date | readableDate }}</time></p>
+{%- if talk.embedVideo %}
+<h2>Video recording</h2>
+<div class="frame-container">
+  <iframe src="{{ talk.embedVideo }}" title="{{ talk.title }}" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+</div>
+{%- endif %}
+<h2>Slides</h2>
+<div class="frame-container">
+  {%- set iframeType = 'type="application/pdf"' if talk.slideType == "pdf" else '' %}
+  <iframe src="{{ talk.slides }}" width="100%" height="600" {{ iframeType | safe }} frameborder="0" allowfullscreen
+    style="border: 1px solid #ccc; border-radius: 8px;" title="{{ talk.title }} slides" loading="lazy">
+  </iframe>
+  <p>&nbsp;</p>
+</div>
