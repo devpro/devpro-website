@@ -3,8 +3,6 @@ title: Talks
 permalink: /talks/index.html
 ---
 
-<!-- TODO: split english/french -->
-
 <div class="timeline">
   {% set prevYear = null %}
   {%- for talk in talks | sortByDate | reverse %}
@@ -19,7 +17,7 @@ permalink: /talks/index.html
         {%- if talk.language != "en" %}
         <span class="language-tag">{{ talk.language | upper }}</span>
         {%- endif %}
-        {% if talk.video %}
+        {% if talk.embedVideo %}
         <span class="icon video-icon" title="Video available">🎥</span>
         {% endif %}
       </h3>

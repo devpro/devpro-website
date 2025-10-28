@@ -65,9 +65,9 @@ article {
   padding: 1rem 0 1.5rem 0;
 }
 
-/* Youtube video */
+/* Frame (video youtube, web slides, PDF, slides) */
 
-.video-container {
+.frame-container {
   position: relative;
   max-width: 80%;
   /* 80% of 56.25% (16:9) = 45% to maintain aspect ratio */
@@ -76,7 +76,7 @@ article {
   overflow: hidden;
 }
 
-.video-container iframe {
+.frame-container iframe {
   position: absolute;
   top: 0;
   left: 0;
