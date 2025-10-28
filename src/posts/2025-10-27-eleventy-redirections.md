@@ -4,9 +4,10 @@ tags: [static-site]
 ---
 
 Learn how to manage HTTP redirects in Eleventy for static sites using a simple template and global data file.
-Perfect for GitHub Pages and maintaining a seamless user experience!
 
 <!-- more -->
+
+Perfect for GitHub Pages and maintaining a seamless user experience!
 
 ## Context
 
@@ -17,6 +18,7 @@ In my case, my static site is hosted on GitHub Pages, which does not support `.h
 
 Ensure that the redirect template is not part of a collection, such as posts.
 Otherwise, it might appear on the website, which is undesirable.
+
 Redirects should be seamless and transparent to users.
 
 ## Define a global data file
@@ -81,3 +83,7 @@ The eleventyExcludeFromCollections and excludeFromSitemap settings prevent the r
 Now, visiting the old URL (e.g., /my-old-link/) will automatically redirect users to the new URL (e.g., /my-new-one/) seamlessly.
 
 Test locally using `npx eleventy --serve` or verify after deploying to GitHub Pages.
+
+## Going forward
+
+Now that the setup is done, your only action to manage HTTP redirects (list, add, remove, edit) is by looking and editing the file `src/_data/redirections.json`.
