@@ -3,10 +3,10 @@ pagination:
   data: talks
   size: 1
   alias: talk
+  addAllPagesToCollections: true
 eleventyComputed:
   title: talk.title
 permalink: /talk/{{ talk.slug or talk.title | slugify }}/
-tags: talk
 section:
   title: "Talks"
   url: "/talks"

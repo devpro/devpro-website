@@ -8,14 +8,12 @@ excludeFromSitemap: true
 <urlset xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'
   xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-  {%- for page in collections.showInSitemap %}
-  {%- if page.url and page.data.excludeFromSitemap != true %}
+  {%- for page in collections.sitemap %}
   <url>
     <loc>{{ website.baseUrl }}{{ page.url }}</loc>
     <lastmod>{{ page.data.lastUpdated | toIsoString or page.date | toIsoString }}</lastmod>
     <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "weekly" }}</changefreq>
     <priority>0.5</priority>
   </url>
-  {%- endif %}
   {%- endfor %}
 </urlset>
