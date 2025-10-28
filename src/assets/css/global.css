@@ -596,7 +596,7 @@ nav .menu {
   border: 1px solid var(--pico-muted-border-color);
   border-radius: 12px;
   padding: 1.5rem 1.5rem 0.5rem 1.5rem;
-  margin: 0.5rem 0 0 0;
+  margin: 2rem 0 0 0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .04);
 }
 

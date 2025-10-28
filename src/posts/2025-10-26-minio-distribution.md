@@ -92,7 +92,7 @@ Based on S3 compatibility, you may consider:
 
 ## Conclusion
 
-The next steps depend heavily on the context:
+The decision depend heavily on the context:
 
 - For **community** or **non-production** use, Chainguard offers the easiest security solution, but it should not be used in production due to the complexity of managing an environment with the `:latest` version. Building your own image is also an option.
 - For **enterprises** or **production** environments, consider enterprise offerings, which may provide additional valuable features, such as vulnerability review, certifications, compliance, container hardening and Helm Charts.
@@ -106,10 +106,10 @@ There is real value in paying for services from secured application providers.
     <strong>Uncertain about next steps?</strong>
   </p>
   <p class="cta-content">
-    I help organizations deliver and operate Cloud Native solutions — secured, highly available, vendor-free.
+    I help organizations deliver and operate Cloud Native environments - secured, highly available, vendor-free.
   </p>
   <p class="cta-action">
-    <a href="/contact/" class="cta-btn">Let’s talk strategy →</a>
+    <a href="/contact/" class="cta-btn">Let's talk solutions →</a>
     <span class="free-call-badge">Free 15-min call</span>
   </p>
 </section>
