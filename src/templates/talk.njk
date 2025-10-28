@@ -5,7 +5,7 @@ pagination:
   alias: talk
   addAllPagesToCollections: true
 eleventyComputed:
-  title: talk.title
+  title: "{{ talk.title | safe }}"
 permalink: /talk/{{ talk.slug or talk.title | slugify }}/
 section:
   title: "Talks"
