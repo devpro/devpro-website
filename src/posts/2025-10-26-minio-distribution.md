@@ -95,7 +95,7 @@ Based on S3 compatibility, you may consider:
 The next steps depend heavily on the context:
 
 - For **community** or **non-production** use, Chainguard offers the easiest security solution, but it should not be used in production due to the complexity of managing an environment with the `:latest` version. Building your own image is also an option.
-- For **enterprises** or **production** environments, consider enterprise offerings, which may provide additional valuable features, such as RapidFort's container hardening.
+- For **enterprises** or **production** environments, consider enterprise offerings, which may provide additional valuable features, such as vulnerability review, certifications, compliance, container hardening and Helm Charts.
 - For **architects**, consider replacing MinIO with an alternative component, reinforcing the importance of avoiding vendor lock-in when designing systems.
 
 This may also present an interesting opportunity to evaluate how your organization manages its supply chain, assesses its container security posture, and addresses the risks of relying directly on open-source artifacts.
