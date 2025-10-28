@@ -101,8 +101,18 @@ The next steps depend heavily on the context:
 This may also present an interesting opportunity to evaluate how your organization manages its supply chain, assesses its container security posture, and addresses the risks of relying directly on open-source artifacts.
 There is real value in paying for services from secured application providers.
 
-I'd be eager to hear your thoughts!
-Please feel free to [contact me](/contact).
+<section class="expert-cta">
+  <p class="cta-header">
+    <strong>Uncertain about next steps?</strong>
+  </p>
+  <p class="cta-content">
+    I help organizations deliver and operate Cloud Native solutions — secured, highly available, vendor-free.
+  </p>
+  <p class="cta-action">
+    <a href="/contact/" class="cta-btn">Let’s talk strategy →</a>
+    <span class="free-call-badge">Free 15-min call</span>
+  </p>
+</section>
 
 ## Appendix: Global Map of CVE-2025-62506
 
