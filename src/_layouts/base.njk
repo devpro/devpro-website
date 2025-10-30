@@ -134,6 +134,9 @@
   </footer>
   <script src="/scripts/copy-button.js" defer></script>
   <script src="/scripts/theme-switcher.js"></script>
+  {%- if process.environment == "production" %}
+  <script data-goatcounter="https://devprofr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {%- endif %}
 </body>
 
 </html>
