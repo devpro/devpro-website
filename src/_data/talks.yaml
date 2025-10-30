@@ -80,3 +80,9 @@
   slideType: pdf
   language: fr
   slug: trsb-meetup-retour-experience-devops
+- title: Puppet Dojo
+  date: 2019-03-13
+  event: Sogetrel Webinar
+  slides: https://slides.com/devprofr/dojo-puppet/embed
+  language: en
+  slug: sogetrel-webinar-dojo-puppet
