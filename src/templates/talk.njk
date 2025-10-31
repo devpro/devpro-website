@@ -24,6 +24,7 @@ section:
 <div class="frame-container">
   {%- set iframeType = 'type="application/pdf"' if talk.slideType == "pdf" else '' %}
   <iframe src="{{ talk.slides }}" width="100%" height="600" {{ iframeType | safe }} frameborder="0" allowfullscreen
+    webkitallowfullscreen mozallowfullscreen scrolling="no"
     style="border: 1px solid #ccc; border-radius: 8px;" title="{{ talk.title }} slides" loading="lazy">
   </iframe>
   <p>&nbsp;</p>

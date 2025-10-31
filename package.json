@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf ./_site",
-    "build": "npx @11ty/eleventy",
+    "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build:local": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
