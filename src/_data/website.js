@@ -8,6 +8,5 @@ export default {
     email: "bertrand@devpro.fr",
     profile: "/images/bertrand-lecres.jpg",
     preview: "/images/devpro-header.jpg"
-  },
-  indexNowKey: "527dc10718fd44b580bec46c39d81015"
+  }
 };

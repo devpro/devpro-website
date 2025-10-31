@@ -25,6 +25,8 @@ jobs:
         run: npm install
       - name: Build static files
         run: npm run build
+      - name: Create IndexNow file
+        run: echo ${{ secrets.INDEXNOW_KEY }} > _site/${{ secrets.INDEXNOW_KEY }}.txt
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
