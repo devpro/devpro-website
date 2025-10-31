@@ -44,3 +44,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  index:
+    needs: deploy
+    runs-on: ubuntu-latest
+    name: Send pages to IndexNow (Bing)
+    steps:
+      - uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: 'https://devpro.fr/sitemap.xml'
+          key: ${{ secrets.INDEXNOW_KEY }}
