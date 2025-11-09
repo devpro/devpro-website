@@ -8,7 +8,7 @@ Some vendors promise *perfect* security with their VM and container images, but 
 <!-- more -->
 
 Supply-chain attacks are at an all-time high.
-We need **rock-solid base images** more than ever.
+We need **rock-solid images** more than ever.
 New providers launch their own Linux distributions with bold security claims.
 So why not ditch RHEL or Ubuntu? [^1]
 
