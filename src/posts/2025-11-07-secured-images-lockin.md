@@ -24,7 +24,7 @@ A sleek, minimal distro promises:
 * Tiny footprint
 * Zero unnecessary packages
 
-It's **open-source**, fast, and free to try. This is ideal for containers.
+It's **open-source**, fast, and free to try.
 
 But it is **built, governed, and updated by one company**, not a global community.
 
@@ -65,7 +65,7 @@ Support Model        | Community Distros    | Vendor Distro
 **Planning Horizon** | Years                | Weeks
 
 Enterprises certify systems, schedule upgrades, and plan budgets.
-Constant change forces you to **run just to stand still**.
+Constant change forces you **to run just to stand still**.
 
 Faster patches don't help if they break your app or force constant rebuilds.
 
@@ -84,7 +84,7 @@ A single misstep in a closed pipeline becomes an **invisible vulnerability**.
 ## The VMware echo: Freedom lost overnight
 
 VMware started with open elements and broad adoption.
-Broadcom acquired it and resulted in price hikes, slashed support, forced migrations.
+Broadcom acquired VMware and it resulted in price hikes, slashed support, forced migrations.
 
 A vendor distro can:
 
@@ -93,17 +93,17 @@ A vendor distro can:
 * Slow updates
 * Raise prices
 
-**Your container images become hostages to someone else's business decisions.**
+Your container images become **hostages to someone else's business decisions**.
 
 ## TCO Trap: Free → Fee → Stuck
 
 Stage         | What You Get                             | What You Lose
 --------------|------------------------------------------|----------------------------------
-**Free tier** | Flawless demo, SBOMs, fast scans         | Nothing for a PoC
+**Free tier** | Flawless demo, SBOMs, fast scans         | -
 **Paid tier** | SLAs, custom packages, proprietary tools | Exit path closes
 **Year 3+**   | Missing package? Wait.                   | Want to leave? Rebuild from zero.
 
-Free to start **rarely means** low long-term cost.
+Free to start **doesn't mean** reduced long-term cost.
 
 ## Vendor lock-in: Spot it, stop it
 
@@ -113,6 +113,8 @@ Who controls packages? | **Them**      | **You + the world**
 Exit cost              | **High**      | **Low**
 Transparency           | **Partial**   | **Full**
 Future-proof           | **Fragile**   | **Resilient**
+
+Avoiding vendor lock-in means preserving the ability to switch providers or self-host without disproportionate effort or cost.
 
 ## Conclusion: Security needs freedom
 
