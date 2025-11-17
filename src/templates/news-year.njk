@@ -4,11 +4,11 @@ pagination:
   size: 1
   alias: year
 eleventyComputed:
-  title: News from {{ year }}
+  title: "{{ year }}"
 permalink: /news/{{ year }}/index.html
 section:
   title: "News"
-  url: "/news"
+  url: "/news/2025"
 excludeFromSitemap: true
 ---
 {%- set newsInYear = news['2025'] %}
