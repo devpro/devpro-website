@@ -29,18 +29,18 @@ layout: base
   <div>
     <h2>Latest news</h2>
     <div>
-      {%- for news in collections.news | reverse | first(3) %}
+      {%- for news in news['2025'] | reverse | first(3) %}
       <div>
         <div>
           <small><time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time></small>
         </div>
         <div>
-          <a href="{{ news.data.link }}" target="_blank">{{ news.data.title }}</a>
-          <p><small>{{ news.data.description }}</small></p>
+          <a href="{{ news.link }}" target="_blank">{{ news.title }}</a>
+          <p><small>{{ news.description }}</small></p>
         </div>
       </div>
       {%- endfor %}
     </div>
-    <p><a href="/news">All news</a></p>
+    <p><a href="/news/2025">All news</a></p>
   </div>
 </div>

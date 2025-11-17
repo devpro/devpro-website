@@ -1,0 +1,31 @@
+---
+pagination:
+  data: years
+  size: 1
+  alias: year
+eleventyComputed:
+  title: News from {{ year }}
+permalink: /news/{{ year }}/index.html
+section:
+  title: "News"
+  url: "/news"
+excludeFromSitemap: true
+---
+{%- set newsInYear = news['2025'] %}
+{%- if newsInYear.length %}
+<div>
+  {%- for news in newsInYear | reverse %}
+  <div>
+    <div>
+      <time datetime="{{ news.date | htmlDateString }}">{{ news.date | readableDate }}</time>
+    </div>
+    <div>
+      <h4><a href="{{ news.link }}" target="_blank">{{ news.title }}</a></h4>
+      <p>{{ news.description }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{%- else %}
+<p>No news found for {{ year }}.</p>
+{%- endif %}
