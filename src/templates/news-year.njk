@@ -21,7 +21,7 @@ excludeFromSitemap: true
     </div>
     <div>
       <h4><a href="{{ news.link }}" target="_blank">{{ news.title }}</a></h4>
-      <p>{{ news.description }}</p>
+      <p>{{ news.description | toHtml | safe }}</p>
     </div>
   </div>
   {%- endfor %}
