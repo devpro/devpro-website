@@ -106,9 +106,9 @@
             <span class="visually-hidden">Home</span>
           </a>
         </li>
-        {% if section %}
+        {%- if section %}
         <li><a href="{{ section.url }}">{{ section.title }}</a></li>
-        {% endif %}
+        {%- endif %}
         <li>{{ title }}</li>
       </ol>
     </nav>
@@ -126,9 +126,9 @@
         <li><small>&copy; 2025 {{ website.author.name }}</small></li>
       </ul>
       <ul>
-        <li><small><a href="/about" class="secondary">About</a></small></li>
-        <li><small><a href="/news" class="secondary">News</a></small></li>
-        <li><small><a href="/legal-mentions" class="secondary" aria-label="Legal Mentions">Legal</a></small></li>
+        {%- for item in navigation.bottom %}
+        <li><small><a href="{{ item.url }}" class="secondary" aria-label="{{ item.label or item.title }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a></small></li>
+        {%- endfor %}
       </ul>
     </nav>
   </footer>

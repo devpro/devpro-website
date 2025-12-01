@@ -4,7 +4,7 @@ import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
 import footnote_plugin from 'markdown-it-footnote';
 import arrayPlugin from './src/_plugins/array-plugin.js';
-import blogPlugin from './src/_plugins/blog-plugin.js';
+import contentPlugin from './src/_plugins/content-plugin.js';
 import datePlugin from './src/_plugins/date-plugin.js';
 import feedPlugin from './src/_plugins/feed-plugin.js';
 import imagePlugin from './src/_plugins/image-plugin.js';
@@ -36,24 +36,11 @@ export default function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnote_plugin));
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(arrayPlugin);
-  eleventyConfig.addPlugin(blogPlugin, markdownParser);
+  eleventyConfig.addPlugin(contentPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
   eleventyConfig.addPlugin(feedPlugin);
   eleventyConfig.addPlugin(imagePlugin);
   eleventyConfig.addPlugin(stringPlugin);
-
-  eleventyConfig.addCollection('sitemap', collection => {
-    const pages = collection.getAll().filter((item) => {
-      return item.url &&
-        !item.data.excludeFromSitemap;
-    });
-    // notPaginated.forEach(p => {
-    //   if (p.url) {
-    //     console.log(`  URL: ${p.url} | Template: ${p.inputPath.split('/').pop()} |  ${p.data?.pagination}`);
-    //   }
-    // });
-    return pages;
-  });
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({

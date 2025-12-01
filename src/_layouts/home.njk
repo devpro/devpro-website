@@ -36,7 +36,7 @@ layout: base
         </div>
         <div>
           <a href="{{ news.link }}" target="_blank">{{ news.title }}</a>
-          <p><small>{{ news.description }}</small></p>
+          <p><small>{{ news.description | toHtml | safe }}</small></p>
         </div>
       </div>
       {%- endfor %}

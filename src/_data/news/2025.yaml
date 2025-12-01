@@ -50,3 +50,11 @@
   title: Helm 4 released
   link: https://github.com/helm/helm/releases/tag/v4.0.0
   description: This major version overhauls plugins with WebAssembly support and turns post-renderers into plugins, while adding server-side apply and smarter resource waiting. It also speeds up operations with content-based caching, ensures reproducible charts, and modernizes logging and the SDK.
+- date: 2025-11-19
+  title: Angular 21 released
+  link: https://blog.angular.dev/announcing-angular-v21-57946c34f14b
+  description: This version introduces AI-powered tooling via MCP, makes zoneless change detection default, adds Signal Forms and Angular ARIA, switches to Vitest, cuts bundle sizes up to 40% with a new tree-shaker, and brings major routing and build improvements. See also [ninja squad](https://blog.ninja-squad.com/2025/11/20/what-is-new-angular-21.0).
+- date: 2025-11-27
+  title: Symfony 8 released
+  link: https://symfony.com/8
+  description: This version introduces major enhancements including multi-step forms, invokable commands, PHP array-based configurations, significant performance boosts via PHP 8.4 lazy objects and cache optimizations. See also [symfony/releases](https://github.com/symfony/symfony/releases/tag/v8.0.0).
