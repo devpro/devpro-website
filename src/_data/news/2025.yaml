@@ -58,3 +58,12 @@
   title: Symfony 8 released
   link: https://symfony.com/8
   description: This version introduces major enhancements including multi-step forms, invokable commands, PHP array-based configurations, significant performance boosts via PHP 8.4 lazy objects and cache optimizations. See also [symfony/releases](https://github.com/symfony/symfony/releases/tag/v8.0.0).
+
+<!--
+GitHub billing self-hosted
+
+Docker Hardened Images
+https://www.linkedin.com/pulse/safer-container-ecosystem-docker-free-hardened-images-docker-nxesc/
+https://www.docker.com/products/hardened-images/
+https://hub.docker.com/hardened-images/catalog
+-->
