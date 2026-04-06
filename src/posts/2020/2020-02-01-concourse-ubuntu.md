@@ -60,7 +60,7 @@ In Azure, add a record A on the URL and the public IP of the VM in the DNS Zone.
 
 Make sure to enable the inbound HTTP requests on ports 80, 8080.
 
-In Azure, in the VM ressource page, it is in the networking page.
+In Azure, in the VM resource page, it is in the networking page.
 
 ### PostgreSQL
 
