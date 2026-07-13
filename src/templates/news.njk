@@ -1,18 +1,11 @@
 ---
-pagination:
-  data: years
-  size: 1
-  alias: year
-eleventyComputed:
-  title: "{{ year }}"
-permalink: /news/{{ year }}/index.html
-section:
-  title: "News"
-  url: "/news"
-excludeFromSitemap: true
+title: News
+permalink: /news/index.html
 ---
+{%- for year in years | reverse %}
 {%- set newsInYear = news[year] %}
 {%- if newsInYear.length %}
+<h3>{{ year }}</h3>
 <div>
   {%- for news in newsInYear | reverse %}
   <div>
@@ -26,6 +19,5 @@ excludeFromSitemap: true
   </div>
   {%- endfor %}
 </div>
-{%- else %}
-<p>No news found for {{ year }}.</p>
 {%- endif %}
+{%- endfor %}

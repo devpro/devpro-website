@@ -35,7 +35,7 @@ active:
   - title: Sales Portal
     repoUrl: https://gitlab.com/devpro-labs/demo/sales-portal
     repoType: gitlab
-    description: An educational platform to manage and simulate sales activities, built for learning (micro-services, containers) and experimentation (observability, security).
+    description: An educational platform to manage and simulate sales activities, built for learning and experimentation.
     technologies: [.NET, MongoDB, Kubernetes]
 maintenance:
   - title: almops

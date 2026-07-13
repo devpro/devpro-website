@@ -1,4 +1,12 @@
-```ps1
+---
+title: "Bulk unlist old NuGet package versions"
+tags: [nuget, dotnet, powershell]
+---
+Keeping only the latest versions of your NuGet packages listed on the official NuGet gallery is easy to automate with a PowerShell function built on `dotnet nuget delete`.
+
+<!-- more -->
+
+```powershell
 $packages = @(
     "Withywoods.Configuration",
     "Withywoods.Net.Http",

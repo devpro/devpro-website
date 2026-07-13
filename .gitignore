@@ -140,3 +140,6 @@ vite.config.ts.timestamp-*
 
 # 11ty build
 _site
+
+# JetBrains IDE
+.idea/

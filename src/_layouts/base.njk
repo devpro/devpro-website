@@ -108,6 +108,9 @@
         </li>
         {%- if section %}
         <li><a href="{{ section.url }}">{{ section.title }}</a></li>
+        {%- if category %}
+        <li><a href="{{ section.url }}/#{{ category | slugify }}">{{ category }}</a></li>
+        {%- endif %}
         {%- endif %}
         <li>{{ title }}</li>
       </ol>
@@ -123,7 +126,7 @@
   <footer class="container">
     <nav>
       <ul>
-        <li><small>&copy; 2025 {{ website.author.name }}</small></li>
+        <li><small>&copy; 2026 {{ website.author.name }}</small></li>
       </ul>
       <ul>
         {%- for item in navigation.bottom %}

@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import yaml from 'js-yaml';
+import { load as yamlLoad, YAML11_SCHEMA } from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
 import footnote_plugin from 'markdown-it-footnote';
@@ -19,8 +19,12 @@ export default function (eleventyConfig) {
   let markdownParser = markdownIt(markdownOptions);
   // eleventyConfig.setLibrary('md', markdownParser);
 
+  // keeps draft content out of the built site
+  eleventyConfig.ignores.add('src/_drafts/**');
+
   // adds yaml support in global data
-  eleventyConfig.addDataExtension('yaml, yml', contents => yaml.load(contents));
+  // YAML 1.1 schema keeps js-yaml v4 behavior, e.g. dates parsed as Date objects
+  eleventyConfig.addDataExtension('yaml, yml', contents => yamlLoad(contents, { schema: YAML11_SCHEMA }));
 
   // copies assets to built site
   eleventyConfig

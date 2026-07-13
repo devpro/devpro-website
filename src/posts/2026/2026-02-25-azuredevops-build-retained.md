@@ -1,8 +1,14 @@
+---
+title: "Delete an Azure DevOps pipeline whose builds are retained by a release"
+tags: [azure-devops, powershell]
+---
+Azure DevOps can refuse to delete a pipeline when its builds are retained by a release, but a small PowerShell script can clean up the leases and unblock the deletion.
 
+<!-- more -->
 
 > One or more builds associated with the requested pipeline(s) are retained by a release. The pipeline(s) and builds will not be deleted.
 
-```ps1
+```powershell
 $personalAccessToken = "xxxx"
 $organization       = "xxxx"
 $project            = "xxxx"
