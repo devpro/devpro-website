@@ -1,7 +1,7 @@
 ---
 title: "MinIO container images gone? Best alternatives (2025)"
 tags: [container, storage, security, open-source]
-image: images/dockerhub-minio-20251026.png
+image: ../images/dockerhub-minio-20251026.png
 ---
 
 MinIO, a popular open-source object storage solution, has shifted its community edition to a "source-only" distribution as of October 2025.
@@ -33,7 +33,7 @@ The announcement coincided with a critical security release (`RELEASE.2025-10-15
 
 The latest official MinIO image is outdated, harboring CVE-2025-62506, where restricted accounts can spawn unrestricted ones, risking unauthorized data access. Customers get binaries through AIStor, but the community must build manually.
 
-![Docker Hub Search for MinIO](images/dockerhub-minio-20251026.png)
+![Docker Hub Search for MinIO](../images/dockerhub-minio-20251026.png)
 
 This screenshot from Docker Hub (October 26, 2025) displays the two only options users had until last Summer:
 
@@ -118,7 +118,7 @@ There is real value in paying for services from secured application providers.
 
 [Netlas](https://netlas.io/) conducted a detailed search highlighting instances of the MinIO privilege escalation vulnerability [^4]:
 
-![Netlas report on CVE-2025-62506](images/netlas-minio-cve-20251026.jpg)
+![Netlas report on CVE-2025-62506](../images/netlas-minio-cve-20251026.jpg)
 
 ## Appendix: Scanning images with Trivy
 

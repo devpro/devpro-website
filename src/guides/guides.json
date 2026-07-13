@@ -1,0 +1,10 @@
+{
+  "layout": "guide",
+  "permalink": "/guide/{{ title | slugify }}/index.html",
+  "tags": "guides",
+  "section": {
+    "title": "Guides",
+    "url": "/guides"
+  },
+  "includeInSearch": true
+}

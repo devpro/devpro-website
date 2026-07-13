@@ -2,19 +2,38 @@ export default {
   top: [
     {
       title: 'Blog',
-      url: '/blog/'
+      url: '/blog'
+    },
+    {
+      title: 'Guides',
+      url: '/guides'
     },
     {
       title: 'Projects',
-      url: '/projects/'
+      url: '/projects'
     },
     {
       title: 'Services',
-      url: '/services/'
+      url: '/services'
+    }
+  ],
+  bottom: [
+    {
+      title: 'About',
+      url: '/about'
     },
     {
       title: 'Talks',
-      url: '/talks/'
+      url: '/talks'
+    },
+    {
+      title: 'News',
+      url: '/news'
+    },
+    {
+      title: 'Legal',
+      label: 'Legal Mentions',
+      url: '/legal-mentions'
     }
   ]
 };

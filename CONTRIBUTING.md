@@ -36,6 +36,8 @@ The website is using:
 <root>/
 ├── src/
 │   ├── _data/
+│   │   └── news/
+│   │       └── 2025.css
 │   │   ├── <type>.js
 │   │   ├── <type>.json
 │   │   └── <type>.yaml
@@ -50,9 +52,6 @@ The website is using:
 │   │       └── global.css
 │   │   └── scripts/
 │   │       └── <component>.js
-│   ├── news/
-│   │   ├── <news>.md
-│   │   └── news.json
 │   ├── pages/
 │   │   ├── <page>.md
 │   │   └── pages.json

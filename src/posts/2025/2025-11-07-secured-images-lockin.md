@@ -1,7 +1,7 @@
 ---
 title: "The siren's call of secure images: Community Linux versus vendor-specific distributions"
 tags: [open-source, security, linux]
-image: images/linux-container-freedom.jpg
+image: ../images/linux-container-freedom.jpg
 ---
 Some vendors promise *perfect* security with their VM and container images, but there's a catch.
 
@@ -14,7 +14,7 @@ So why not ditch RHEL or Ubuntu? [^1]
 
 This post explores the **real trade-offs** between **vendor-specific distributions** and **proven, community Linux**. [^2]
 
-![Linux container freedom](images/linux-container-freedom.jpg)
+![Linux container freedom](../images/linux-container-freedom.jpg)
 
 ## The mirage of perfect images
 
@@ -84,7 +84,7 @@ A single misstep in a closed pipeline becomes an **invisible vulnerability**.
 ## The VMware echo: Freedom lost overnight
 
 VMware started with open elements and broad adoption.
-Broadcom acquired VMware and it resulted in price hikes, slashed support, forced migrations.
+Broadcom acquired VMware, and it resulted in price hikes, slashed support, forced migrations.
 
 A vendor distro can:
 

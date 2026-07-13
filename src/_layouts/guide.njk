@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+{{ content | safe }}
+
+{%- if relatedTags %}
+{%- set relatedPosts = collections.posts | withAnyTag(relatedTags) %}
+{%- if relatedPosts.length %}
+<h2>Blog posts</h2>
+{%- for post in relatedPosts | reverse %}
+{% include "blogpost-card.njk" %}
+{%- endfor %}
+{%- endif %}
+{%- endif %}

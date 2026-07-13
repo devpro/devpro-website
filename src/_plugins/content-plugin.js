@@ -15,12 +15,25 @@ export default function (eleventyConfig, markdownParser) {
     });
   });
 
-  eleventyConfig.addCollection("tagList", function(collectionApi) {
+  eleventyConfig.addCollection("tagList", function (collectionApi) {
     const tagsSet = new Set();
     collectionApi.getAll().forEach(item => {
       const tags = item.data.tags || [];
       tags.filter(tag => !['posts'].includes(tag)).forEach(tag => tagsSet.add(tag));
     });
     return [...tagsSet].sort();
+  });
+
+  eleventyConfig.addCollection("guidesByCategory", function (collectionApi) {
+    const guides = collectionApi.getFilteredByGlob("src/guides/*.md");
+    // console.log(`\nGuides found: ${guides.length}`);
+    // guides.forEach(guide => console.log("  →", guide.inputPath));
+    const map = {};
+    guides.forEach(guide => {
+      const category = guide.data.category || "Uncategorized";
+      if (!map[category]) map[category] = [];
+      map[category].push(guide);
+    });
+    return map;
   });
 };

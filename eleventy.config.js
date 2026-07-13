@@ -1,10 +1,10 @@
 import { execSync } from 'child_process';
-import yaml from 'js-yaml';
+import { load as yamlLoad, YAML11_SCHEMA } from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlightPlugin from '@11ty/eleventy-plugin-syntaxhighlight';
 import footnote_plugin from 'markdown-it-footnote';
 import arrayPlugin from './src/_plugins/array-plugin.js';
-import blogPlugin from './src/_plugins/blog-plugin.js';
+import contentPlugin from './src/_plugins/content-plugin.js';
 import datePlugin from './src/_plugins/date-plugin.js';
 import feedPlugin from './src/_plugins/feed-plugin.js';
 import imagePlugin from './src/_plugins/image-plugin.js';
@@ -19,8 +19,12 @@ export default function (eleventyConfig) {
   let markdownParser = markdownIt(markdownOptions);
   // eleventyConfig.setLibrary('md', markdownParser);
 
+  // keeps draft content out of the built site
+  eleventyConfig.ignores.add('src/_drafts/**');
+
   // adds yaml support in global data
-  eleventyConfig.addDataExtension('yaml, yml', contents => yaml.load(contents));
+  // YAML 1.1 schema keeps js-yaml v4 behavior, e.g. dates parsed as Date objects
+  eleventyConfig.addDataExtension('yaml, yml', contents => yamlLoad(contents, { schema: YAML11_SCHEMA }));
 
   // copies assets to built site
   eleventyConfig
@@ -36,24 +40,11 @@ export default function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(footnote_plugin));
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(arrayPlugin);
-  eleventyConfig.addPlugin(blogPlugin, markdownParser);
+  eleventyConfig.addPlugin(contentPlugin, markdownParser);
   eleventyConfig.addPlugin(datePlugin);
   eleventyConfig.addPlugin(feedPlugin);
   eleventyConfig.addPlugin(imagePlugin);
   eleventyConfig.addPlugin(stringPlugin);
-
-  eleventyConfig.addCollection('sitemap', collection => {
-    const pages = collection.getAll().filter((item) => {
-      return item.url &&
-        !item.data.excludeFromSitemap;
-    });
-    // notPaginated.forEach(p => {
-    //   if (p.url) {
-    //     console.log(`  URL: ${p.url} | Template: ${p.inputPath.split('/').pop()} |  ${p.data?.pagination}`);
-    //   }
-    // });
-    return pages;
-  });
 
   // forces full page reload on hot reload (needed for code copy button JS that is updating the DOM)
   eleventyConfig.setServerOptions({
