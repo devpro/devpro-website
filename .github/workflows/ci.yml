@@ -25,7 +25,8 @@ jobs:
     name: Markup
     uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@f9d8c00db1ed723e39cfff6c4c7addc77a23c54d
 
-  check-code:
+  code-build:
+    name: "Code > Build"
     runs-on: ubuntu-latest
     steps:
       - name: Checks-out the repository
