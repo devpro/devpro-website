@@ -14,28 +14,22 @@ concurrency:
   group: "${{ github.ref }}-ci"
   cancel-in-progress: true
 
-env:
-  node_version: "24"
-
 permissions:
   contents: read
 
 jobs:
   content-validate:
     name: Markup
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@f9d8c00db1ed723e39cfff6c4c7addc77a23c54d
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
 
   code-build:
     name: "Code > Build"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checks-out the repository
-        uses: actions/checkout@v7
-      - uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.node_version }}
-          cache: npm
-      - name: Install JavaScript dependencies
-        run: npm install
-      - name: Build website
-        run: npm run build
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
+    with:
+      build-command: |
+        npm ci
+        npm run build
+      deploy: false
+      node-version: "24"
+      site-path: _site
+      workflow-parts-version: c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
