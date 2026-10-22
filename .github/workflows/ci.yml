@@ -20,16 +20,12 @@ permissions:
 jobs:
   content-validate:
     name: Markup
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e
 
   code-build:
     name: "Code > Build"
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e
     with:
-      build-command: |
-        npm ci
-        npm run build
       deploy: false
-      node-version: "24"
       site-path: _site
-      workflow-parts-version: c6d06a61a377a41dc192ce58f08a0b5100d9a2bc
+      workflow-parts-version: cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e

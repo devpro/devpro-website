@@ -6,53 +6,38 @@ on:
       - main
   workflow_dispatch: {}
 
-env:
-  node_version: "24"
-
 jobs:
-  build:
-    name: Build website
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: ${{ env.node_version }}
-          cache: npm
-      - name: Install dependencies
-        run: npm install
-      - name: Build static files
-        run: npm run build
-      - name: Create IndexNow file
-        run: echo ${{ secrets.INDEXNOW_KEY }} > _site/${{ secrets.INDEXNOW_KEY }}.txt
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: _site
-
   deploy:
-    name: Deploy to GitHub Pages
-    needs: build
+    name: Deploy
     permissions:
+      contents: read
       pages: write
       id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e
+    with:
+      # The IndexNow file proves the site owns the key the index job submits the pages with.
+      build-command: |
+        npm ci
+        npm run build
+        echo "$INDEXNOW_KEY" > "_site/${INDEXNOW_KEY}.txt"
+      # The date of each page is read from the history.
+      fetch-depth: 0
+      job-name: Build website
+      site-path: _site
+      workflow-parts-version: cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e
+    secrets:
+      additional-vars: |
+        INDEXNOW_KEY=${{ secrets.INDEXNOW_KEY }}
 
   index:
+    name: Send pages to IndexNow (Bing)
     needs: deploy
     runs-on: ubuntu-latest
-    name: Send pages to IndexNow (Bing)
+    timeout-minutes: 10
+    permissions: {}
     steps:
-      - uses: bojieyang/indexnow-action@38ddfbd93579a8a44c0dee662121bf9d51098f71
+      - name: Submit the pages of the sitemap
+        uses: devpro/github-workflow-parts/actions/indexnow/submit@cf0d1a4e4cd55c9a1361c5c828c9452dc7c5569e
         with:
-          sitemap-location: 'https://devpro.fr/sitemap.xml'
           key: ${{ secrets.INDEXNOW_KEY }}
+          sitemap-url: https://devpro.fr/sitemap.xml
