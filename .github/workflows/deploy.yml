@@ -13,7 +13,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@bf95c99bf5b5a0bc2d2991c81975488a16f16142
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@1711cf6d760e89fe43e3673dbd8986e355876cca
     with:
       # The IndexNow file proves the site owns the key the index job submits the pages with.
       build-command: |
@@ -24,7 +24,7 @@ jobs:
       fetch-depth: 0
       job-name: Build website
       site-path: _site
-      workflow-parts-version: bf95c99bf5b5a0bc2d2991c81975488a16f16142
+      workflow-parts-version: 1711cf6d760e89fe43e3673dbd8986e355876cca
     secrets:
       additional-vars: |
         INDEXNOW_KEY=${{ secrets.INDEXNOW_KEY }}
@@ -37,7 +37,7 @@ jobs:
     permissions: {}
     steps:
       - name: Submit the pages of the sitemap
-        uses: devpro/github-workflow-parts/actions/indexnow/submit@bf95c99bf5b5a0bc2d2991c81975488a16f16142
+        uses: devpro/github-workflow-parts/actions/indexnow/submit@1711cf6d760e89fe43e3673dbd8986e355876cca
         with:
           key: ${{ secrets.INDEXNOW_KEY }}
           sitemap-url: https://devpro.fr/sitemap.xml

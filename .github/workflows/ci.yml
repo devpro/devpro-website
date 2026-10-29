@@ -20,12 +20,12 @@ permissions:
 jobs:
   markup-lint:
     name: Markup
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@bf95c99bf5b5a0bc2d2991c81975488a16f16142
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@1711cf6d760e89fe43e3673dbd8986e355876cca
 
   code-build:
     name: "Code > Build"
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@bf95c99bf5b5a0bc2d2991c81975488a16f16142
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@1711cf6d760e89fe43e3673dbd8986e355876cca
     with:
       deploy: false
       site-path: _site
-      workflow-parts-version: bf95c99bf5b5a0bc2d2991c81975488a16f16142
+      workflow-parts-version: 1711cf6d760e89fe43e3673dbd8986e355876cca
