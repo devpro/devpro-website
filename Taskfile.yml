@@ -1,0 +1,52 @@
+version: '3'
+
+tasks:
+
+  default:
+    cmds:
+      - task --list
+
+  install:
+    desc: Install the npm packages and the Playwright browser
+    cmds:
+      - npm install
+      - npx playwright install chromium
+
+  clean:
+    desc: Delete the built site
+    cmds:
+      - npm run clean
+
+  build:
+    desc: Build the site for production into _site, with its search index
+    cmds:
+      - npm run build
+
+  start:
+    desc: Run the site with hot reload on http://localhost:8080
+    cmds:
+      - npm start
+
+  test:e2e:
+    desc: Run the Playwright suite against the built site, one spec with -- tests/<spec>
+    deps: [build]
+    cmds:
+      - npm run test:e2e -- {{.CLI_ARGS}}
+
+  test:screenshots:
+    desc: Take screenshots of every page at three widths in both themes into e2e/screenshots, to look at the UI
+    deps: [build]
+    env:
+      SCREENSHOTS: '1'
+    cmds:
+      - npm run test:e2e -- tests/screenshots.spec.ts
+
+  ci:wait:
+    desc: Wait for the IstarCI run of the last commit and exit with its result
+    cmds:
+      - istarci wait {{.CLI_ARGS}}
+
+  ci:status:
+    desc: Show the IstarCI jobs of the last run
+    cmds:
+      - istarci status

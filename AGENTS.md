@@ -11,6 +11,7 @@ Linux or WSL2, Docker and `bash`.
 - Headers stay: short documentation still has sections.
 - Linters for YAML and Markdown are never run by an agent.
 - Commit only when asked, and never push.
+  After a commit, `istarci wait` waits for its IstarCI run and prints the log of each job that failed.
   Shell scripts are `snake_case` and committed with the executable bit (`git update-index --chmod=+x`).
 - Documentation is as short as possible.
 

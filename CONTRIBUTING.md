@@ -62,21 +62,44 @@ The website is using:
 │   │   ├── <template>.njk
 │   │   └── templates.json
 │   └── index.md                  → home page
-└── eleventy.config.js            → main file for Eleventy
+├── e2e/
+│   ├── pages/                    → page objects
+│   ├── tests/                    → Playwright specs
+│   └── playwright.config.ts
+├── eleventy.config.js            → main file for Eleventy
+└── Taskfile.yml                  → commands
 ```
 
 ## Local run
 
-Install JavaScript dependencies:
+[Task](https://taskfile.dev) runs the commands, `task` listing them.
+
+Install the npm packages and the Playwright browser:
 
 ```bash
-npm install
+task install
 ```
 
-Run locally the website:
+Run the website with hot reload:
 
 ```bash
-npm start
+task start
+```
+
+## End-to-end tests
+
+[Playwright](https://playwright.dev) checks the built site, served from `_site` as GitHub Pages does.
+A page object of `e2e/pages` holds the locators of a page, and the specs of `e2e/tests` only use them.
+
+```bash
+task test:e2e
+task test:e2e -- tests/search.spec.ts
+```
+
+Screenshots of every page, at three widths in both themes, land in `e2e/screenshots`:
+
+```bash
+task test:screenshots
 ```
 
 ## Tips
@@ -101,3 +124,4 @@ npm start
 
 [IstarCI](https://github.com/devpro/istarci) runs the GitHub Actions pipeline in Docker before the push.
 `istarci add` and `istarci install-hook` set it up for this repository.
+`task ci:wait` waits for the run of the last commit and prints the log of each job that failed.
