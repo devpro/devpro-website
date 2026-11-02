@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=http://127.0.0.1:7842/assets/istarci.schema.json
+# Settings of this repository, over those of ~/.istarci/config.yml, which istarci docs configuration describes.
+
+runner:
+  images:
+    # Chromium loads system libraries that only this image carries.
+    "build-test*": ghcr.io/devpro/debian-node-playwright:latest
+
+workflow:
+  onDisallowedAction: fail
+  allowedActions:
+    - actions/*
+    - github/*
+    - devpro/github-workflow-parts/*

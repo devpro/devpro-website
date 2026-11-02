@@ -90,6 +90,7 @@ task start
 
 [Playwright](https://playwright.dev) checks the built site, served from `_site` as GitHub Pages does.
 A page object of `e2e/pages` holds the locators of a page, and the specs of `e2e/tests` only use them.
+The `build-test` job of the CI runs them, IstarCI giving it the Playwright image of `.istarci.yml`.
 
 ```bash
 task test:e2e

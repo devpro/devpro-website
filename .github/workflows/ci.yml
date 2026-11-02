@@ -29,3 +29,12 @@ jobs:
       deploy: false
       site-path: _site
       workflow-parts-version: 8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+
+  build-test:
+    name: Build & Test
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-node-quality.yml@8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+    with:
+      # Against the site the build script puts in _site, which the end-to-end server serves.
+      custom-tests: npm run test:e2e
+      job-name: Build & Test
+      workflow-parts-version: 8c856cd16adc8a0ca01c7889a9c7d98ad8593818
