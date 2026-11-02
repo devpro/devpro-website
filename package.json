@@ -8,7 +8,8 @@
     "clean": "rm -rf ./_site",
     "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
     "build:local": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "test:e2e": "playwright test -c e2e"
   },
   "repository": {
     "type": "git",
@@ -26,14 +27,16 @@
     "prismjs": "^1.30.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
-    "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-img": "^7.1.1",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "js-yaml": "^5.2.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^24.19.2",
+    "js-yaml": "^5.5.0",
     "luxon": "^3.7.2",
-    "markdown-it": "^14.3.0",
+    "markdown-it": "^15.0.3",
     "markdown-it-footnote": "^4.0.0",
-    "pagefind": "^1.5.2"
+    "pagefind": "^1.6.0"
   }
 }
