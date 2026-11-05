@@ -20,21 +20,21 @@ permissions:
 jobs:
   markup-lint:
     name: Markup
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-markup-lint.yml@5379b9d0052e3b233ec2e56ba8678e827361b89e
 
   code-build:
     name: "Code > Build"
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-pages-deployment.yml@5379b9d0052e3b233ec2e56ba8678e827361b89e
     with:
       deploy: false
       site-path: _site
-      workflow-parts-version: 8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+      workflow-parts-version: 5379b9d0052e3b233ec2e56ba8678e827361b89e
 
   build-test:
     name: Build & Test
-    uses: devpro/github-workflow-parts/.github/workflows/reusable-node-quality.yml@8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+    uses: devpro/github-workflow-parts/.github/workflows/reusable-node-quality.yml@5379b9d0052e3b233ec2e56ba8678e827361b89e
     with:
       # Against the site the build script puts in _site, which the end-to-end server serves.
       custom-tests: npm run test:e2e
       job-name: Build & Test
-      workflow-parts-version: 8c856cd16adc8a0ca01c7889a9c7d98ad8593818
+      workflow-parts-version: 5379b9d0052e3b233ec2e56ba8678e827361b89e
