@@ -4,7 +4,7 @@
 runner:
   images:
     # Chromium loads system libraries that only this image carries.
-    "build-test*": ghcr.io/devpro/debian-node-playwright:latest
+    "build-test*": ghcr.io/devpro/ubuntu-node-playwright:latest
 
 workflow:
   onDisallowedAction: fail
